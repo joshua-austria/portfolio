@@ -4,11 +4,11 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
 }
 
 header {
-    background-color: #27ae60;
+    background-color: #023e9f;
     color: white;
     padding: 20px;
 }
@@ -27,6 +27,25 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
+}
+
+/* Change color on hover */
+nav ul li a:hover {
+    color: #e9bd0d !important; /* Change to your preferred hover color */
+}
+
+/* Detect active link by comparing the current page */
+nav ul li a[href="techstack.html"]:visited {
+    color: #06e85c; /* Change to your preferred active link color */
+}
+
+nav ul li a[href="about.html"]:visited {
+    color: #ffffff;
+}
+
+nav ul li a[href="index.html"]:visited {
+    color: #ffffff;
 }
 
 /* Section Styling */
@@ -47,7 +66,7 @@ section {
 }
 
 #techstack ul li {
-    background: #27ae60;
+    background: #023e9f;
     color: white;
     padding: 10px;
     margin: 5px 0;
