@@ -27,16 +27,17 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     position: relative;
+    transition: color 0.3s ease;
 }
 
 /* Change color on hover */
 nav ul li a:hover {
-    color: #e9bd0d !important; /* Change to your preferred hover color */
+    color: #e9bd0d !important; 
 }
 
 /* Detect active link by comparing the current page */
 nav ul li a[href="techstack.html"]:visited {
-    color: #ffffff; /* Change to your preferred active link color */
+    color: #ffffff; 
 }
 
 nav ul li a[href="about.html"]:visited {
