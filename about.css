@@ -12,17 +12,17 @@ header {
     padding: 20px;
 }
 
-nav ul {
+.nav-menu {
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
+.nav-item {
     display: inline;
     margin: 0 15px;
 }
 
-nav ul li a {
+.nav-link {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -31,21 +31,12 @@ nav ul li a {
 }
 
 /* Change color on hover */
-nav ul li a:hover {
-    color: #e9bd0d !important; 
+.nav-link:hover {
+    color: #e9bd0d; 
 }
-
-/* Detect active link by comparing the current page */
-nav ul li a[href="techstack.html"]:visited {
-    color: #ffffff; 
-}
-
-nav ul li a[href="about.html"]:visited {
+/* active link*/
+.nav-link.active {
     color: #06e85c;
-}
-
-nav ul li a[href="index.html"]:visited {
-    color: #ffffff;
 }
 
 /* Section Styling */
