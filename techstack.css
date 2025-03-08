@@ -59,14 +59,29 @@ section {
     list-style: none;
     padding: 0;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .tech-item {
     background: #023e9f;
     color: white;
-    padding: 10px;
+    padding: 15px;
     margin: 5px 0;
     border-radius: 15px;
-    display: inline-block;
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tech-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
