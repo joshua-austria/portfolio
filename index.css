@@ -28,7 +28,7 @@ header {
 
 nav {
   display: flex;
-  justify-content: center; /* Centers the menu items */
+  justify-content: center;
   width: 100%;
 }
 
@@ -55,12 +55,11 @@ background-color: #007bff;
 }
 
 .nav-link.active {
-color: #fff; /* Blue color */
+color: #fff;
 background-color: #007bff;
 border-radius: 0.375rem;
 }
   
-/* Hero Section */
 #home {
 display: flex;
 align-items: center;
@@ -75,7 +74,7 @@ text-align: left;
 }
 
 .home-content p {
-margin-top: 15px; /* Adjust this value for more or less space */
+margin-top: 15px;
 font-size: 1.2rem;
 color: #555;
 }
