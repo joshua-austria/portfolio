@@ -140,7 +140,7 @@ section {
 /* tablet screens */
 @media (max-width: 768px) {
   body {
-    padding-top: 80px;
+    padding-top: 90px;
   }
 
   .techstack-title {
@@ -165,9 +165,19 @@ section {
 }
 /* mobile screens */
 @media (max-width: 480px) {
+  .nav-menu {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
+
   .techstack-title {
     font-size: 1.6rem;
-    margin: 25px 0 15px;
+    margin-top: 90px;
   }
 
   .techstack-list {

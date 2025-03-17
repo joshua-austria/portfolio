@@ -144,8 +144,8 @@ section {
   }
 
   .nav-link {
-    padding: 0.4rem 0.6rem;
     font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
   }
 
   .About {
@@ -154,6 +154,11 @@ section {
 }
 /* small screens */
 @media (max-width: 360px) {
+
+  nav {
+    top: 10px;
+  }
+
   section {
     margin-top: 90px;
     padding: 15px;
