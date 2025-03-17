@@ -12,6 +12,7 @@ body {
   color: #222;
   text-align: center;
   padding-top: 100px;
+  overflow-x: hidden;
 }
 
 header {
@@ -81,14 +82,14 @@ nav {
 .techstack-title {
   font-size: 2rem;
   color: #4A90E2;
-  margin: 50px 0 30px;
+  margin: 40px 0 25px;
 }
 
 section {
   background: white;
   margin: 20px auto;
   padding: 30px;
-  width: 80%;
+  width: 90%;
   max-width: 800px;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -98,22 +99,21 @@ section {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   flex-wrap: wrap;
   padding: 20px;
 }
 
 .tech-item {
   background: #fff;
-  padding: 20px;
-  border-radius: 15px;
+  padding: 15px;
+  border-radius: 12px;
   width: 140px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .tech-item:hover {
@@ -134,4 +134,68 @@ section {
   top: 0;
   left: 0;
   z-index: -1; 
+}
+
+/* Responsive Breakpoints */
+/* tablet screens */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+
+  .techstack-title {
+    font-size: 1.8rem;
+    margin: 30px 0 20px;
+  }
+
+  .techstack-list {
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .tech-item {
+    width: 120px;
+    padding: 12px;
+  }
+
+  .tech-image {
+    width: 70px;
+    height: 70px;
+  }
+}
+/* mobile screens */
+@media (max-width: 480px) {
+  .techstack-title {
+    font-size: 1.6rem;
+    margin: 25px 0 15px;
+  }
+
+  .techstack-list {
+    gap: 15px;
+  }
+
+  .tech-item {
+    width: 100px;
+    padding: 10px;
+  }
+
+  .tech-image {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* small screens */
+@media (max-width: 360px) {
+  .techstack-title {
+    font-size: 1.4rem;
+  }
+
+  .tech-item {
+    width: 85px;
+  }
+
+  .tech-image {
+    width: 50px;
+    height: 50px;
+  }
 }

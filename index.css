@@ -12,6 +12,7 @@ body {
   color: #222;
   text-align: center;
   padding-top: 100px;
+  overflow-x: hidden;
 }
 
 header {
@@ -50,6 +51,7 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
+  justify-content: center;
 }
 
 .nav-link {
@@ -85,6 +87,7 @@ nav {
 	justify-content: space-around;
 	height: 90vh;
 	padding: 100px 20px;
+  position: relative;
 }
 
 .home-content {
@@ -101,11 +104,13 @@ nav {
 .head1 {
 	font-size: 2.5rem;
 	font-weight: bold;
+  line-height: 1.2;
 }
 
 .head2 {
 	font-size: 2rem;
 	color: #4A90E2;
+  line-height: 1.3;
 }
 
 .highlight {
@@ -115,8 +120,9 @@ nav {
 .profile-pic {
 	width: 250px;
 	border-radius: 50%;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	margin-left: -25%;
+  transition: all 0.3s ease;
 }  
 
 #particles-js {
@@ -126,4 +132,114 @@ nav {
 	top: 0;
 	left: 0;
 	z-index: -1; 
+}
+
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .profile-pic {
+    width: 220px;
+    margin-left: -20%;
+  }
+}
+
+@media (max-width: 992px) {
+  #home {
+    padding: 80px 20px;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    margin-left: -15%;
+  }
+  
+  .head1 {
+    font-size: 2.2rem;
+  }
+  
+  .head2 {
+    font-size: 1.8rem;
+  }
+}
+/* tablet screens */
+@media (max-width: 768px) {
+  body {
+    padding-top: 90px;
+  }
+
+  #home {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .home-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .profile-pic {
+    width: 180px;
+    margin-left: 0;
+    order: -1;
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+  }
+}
+/* mobile screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-menu {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .head1 {
+    font-size: 1.8rem;
+  }
+
+  .head2 {
+    font-size: 1.5rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .profile-pic {
+    width: 160px;
+  }
+}
+/* small screens */
+@media (max-width: 360px) {
+  .profile-pic {
+    width: 140px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .head1 {
+    font-size: 1.6rem;
+  }
+
+  .head2 {
+    font-size: 1.3rem;
+  }
 }
