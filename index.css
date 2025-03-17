@@ -85,7 +85,7 @@ nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	height: 90vh;
+	height: 100vh;
 	padding: 100px 20px;
   position: relative;
 }
@@ -164,7 +164,7 @@ nav {
 /* tablet screens */
 @media (max-width: 768px) {
   body {
-    padding-top: 97px;
+    padding-top: 100px;
   }
 
   #home {
