@@ -226,6 +226,10 @@ nav {
 }
 /* small screens */
 @media (max-width: 360px) {
+  nav {
+    top: 10px
+  }
+
   .profile-pic {
     width: 140px;
   }
