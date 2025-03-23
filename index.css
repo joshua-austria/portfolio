@@ -145,12 +145,17 @@ nav {
 
 @media (max-width: 992px) {
   #home {
-    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
   }
   
   .profile-pic {
     width: 200px;
-    margin-left: -15%;
+    margin-left: 0;
+    order: -1;
   }
   
   .head1 {
@@ -168,9 +173,12 @@ nav {
   }
 
   #home {
+    display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 60px 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-top: -30px;
   }
 
   .home-content {
@@ -210,10 +218,25 @@ nav {
 
   .head1 {
     font-size: 1.8rem;
+    line-height: 1.1;
   }
 
   .head2 {
     font-size: 1.5rem;
+    line-height: 1.1;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    margin-top: -30px;
+  }
+
+  .home-content {
+    margin-bottom: 20px;
   }
 
   .home-content p {
@@ -222,6 +245,7 @@ nav {
 
   .profile-pic {
     width: 160px;
+    margin-top: -10px;
   }
 }
 /* small screens */
