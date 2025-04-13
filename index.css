@@ -9,7 +9,6 @@
 
 body {
   background: linear-gradient(to bottom, #87CEEB, #ffffff);
-  color: #222;
   text-align: center;
   padding-top: 100px;
   overflow-x: hidden;
@@ -51,7 +50,6 @@ nav {
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: center;
 }
 
 .nav-link {
