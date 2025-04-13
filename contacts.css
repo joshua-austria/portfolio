@@ -148,19 +148,19 @@ input:focus, textarea:focus {
 
 .social-media-icons {
   display: flex;
-  justify-content: center; /* or left, right, space-between, etc. */
+  justify-content: center;
   gap: 30px; /* space between icons */
   margin-bottom: 2rem; /* spacing around the container */
 }
 
 .social-media-icons a {
-  color: #333; /* default icon color */
-  font-size: 3rem; /* size up the icons */
+  color: #333; 
+  font-size: 3rem; 
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-media-icons a:hover {
-  color: #007bff; /* or any hover color you like */
+  color: #007bff;
   transform: translateY(-3px);
 }
 
