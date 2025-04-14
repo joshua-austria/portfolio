@@ -25,10 +25,11 @@ header {
   text-align: center;
 }
 
-h1 {
-  margin-bottom: 10px;
+.custom-headname {
+  position: relative;
+  top: 5px; 
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: bold ;
 }
 
 nav {
@@ -54,13 +55,13 @@ nav {
 
 .nav-link {
   display: flex;
-  color: #fff;
+  color: #fff !important;
   align-items: center;
   text-decoration: none;
   font-weight: 600;
   padding: 0.6rem 1rem;
   border-radius: 0.375rem; 
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-link i {
@@ -85,7 +86,6 @@ nav {
 	justify-content: space-around;
 	height: 100vh;
 	padding: 100px 20px;
-  position: relative;
 }
 
 .home-content {
@@ -132,28 +132,136 @@ nav {
 	z-index: -1; 
 }
 
+.hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 24px;
+  position: relative;
+}
+
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #007bff;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 20px;
+}
+
+/* Side Panel Styles */
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  transition: right 0.3s ease;
+}
+
+.side-panel.active {
+  right: 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.side-menu {
+  padding: 60px 0 0 0;
+  list-style: none;
+}
+
+.side-menu li {
+  padding: 15px 25px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.side-menu li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  transition: color 0.2s;
+}
+
+.side-menu li a:hover,
+.side-menu li a.active {
+  color: #007bff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1500;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Show hamburger on mobile */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  
+  header nav {
+    display: none;
+  }
+}
 
 /* Responsive Breakpoints */
 @media (max-width: 1200px) {
   .profile-pic {
     width: 220px;
-    margin-left: -20%;
   }
 }
 
 @media (max-width: 992px) {
   #home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
+    flex-direction: row;
+    padding-top: 20px;
   }
   
   .profile-pic {
     width: 200px;
-    margin-left: 0;
-    order: -1;
   }
   
   .head1 {
@@ -167,27 +275,27 @@ nav {
 /* tablet screens */
 @media (max-width: 768px) {
   body {
-    padding-top: 100px;
+    padding-top: 70px;
   }
 
   #home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column-reverse;
     justify-content: center;
-    gap: 70px;
-    margin-top: -30px;
+    padding-top: 20px;
+    margin-top: 0;
+    height: calc(100vh - 70px);
   }
 
   .home-content {
     max-width: 100%;
-    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 30px;
   }
 
   .profile-pic {
     width: 180px;
     margin-left: 0;
-    order: -1;
+    margin-bottom: 20px;
   }
 
   .nav-menu {
@@ -198,6 +306,7 @@ nav {
     padding: 0.5rem 0.8rem;
   }
 }
+
 /* mobile screens */
 @media (max-width: 480px) {
   h1 {
@@ -224,32 +333,19 @@ nav {
     line-height: 1.1;
   }
 
-  #home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
-    margin-top: -30px;
-  }
-
-  .home-content {
-    margin-bottom: 20px;
-  }
-
   .home-content p {
     font-size: 1rem;
   }
 
   .profile-pic {
     width: 160px;
-    margin-top: -10px;
   }
 }
+
 /* small screens */
 @media (max-width: 360px) {
   nav {
-    top: 11px
+    top: 11px;
   }
 
   .profile-pic {

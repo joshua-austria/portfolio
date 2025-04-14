@@ -10,32 +10,53 @@
 <body>
   <div id="particles-js"></div>
   <header>
-    <h1>Joshua Austria</h1>
-      <nav>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              <i class="fas fa-home"></i> Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">
-              <i class="fas fa-user"></i> About
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="techstack.html" class="nav-link active">
-              <i class="fas fa-code"></i> Tech Stack
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contacts.html" class="nav-link">
-              <i class="fas fa-envelope"></i> Contacts
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <h1 class="custom-headname">Joshua Austria</h1>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">
+            <i class="fas fa-home"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">
+            <i class="fas fa-user"></i> About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="techstack.html" class="nav-link active">
+            <i class="fas fa-code"></i> Tech Stack
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contacts.html" class="nav-link">
+            <i class="fas fa-envelope"></i> Contacts
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
+
+  <!-- Side Panel Mobile Only -->
+  <div class="side-panel">
+    <div class="close-btn">
+      <i class="fas fa-times"></i>
+    </div>
+    <ul class="side-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="techstack.html" class="active">Tech Stack</a></li>
+      <li><a href="contacts.html">Contact</a></li>
+    </ul>
+  </div>
+  <div class="overlay"></div>
 
   <h1 class="techstack-title">Tech Stack</h1>
   <section id="techstack">
@@ -63,8 +84,8 @@
     </ul>
   </section>
 
-<script src="particles.js"></script>
-<script src="app.js"></script>
-
+  <script src="particles.js"></script>
+  <script src="app.js"></script>
+  <script src="hamburger.js"></script>
 </body>
 </html>
