@@ -27,11 +27,13 @@ header {
   z-index: 1000;
 }
 
-.custom-headname {
-  position: relative;
-  top: 5px; 
+.header-title {
+  margin-top: 10px;
   font-size: 1.5rem;
-  font-weight: bold ;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  top: -3px;
 }
   
 nav {
