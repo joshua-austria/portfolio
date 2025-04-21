@@ -150,14 +150,20 @@ input:focus, textarea:focus {
 .social-media-icons {
   display: flex;
   justify-content: center;
-  gap: 30px; /* space between icons */
-  margin-bottom: 2rem; /* spacing around the container */
+  gap: 30px;
+  margin-bottom: 3rem;
+  margin-top: 1rem; 
 }
 
 .social-media-icons a {
   color: #333; 
   font-size: 3rem; 
   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media-icons a i {
+  position: relative; 
+  top: -15px; 
 }
 
 .social-media-icons a:hover {

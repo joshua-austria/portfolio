@@ -98,6 +98,13 @@ section {
   font-size: 1.8rem;
 }
 
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
 #particles-js {
   position: fixed;
   width: 100%;
