@@ -118,8 +118,8 @@ nav {
 }
 
 .profile-pic {
-	width: 250px;
-	border-radius: 50%;
+	width: 300px;
+	border-radius: 100%;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	margin-left: -25%;
   transition: all 0.3s ease;
@@ -239,7 +239,7 @@ nav {
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   #home {
     flex-direction: column-reverse;
     justify-content: center;
@@ -255,7 +255,7 @@ nav {
   }
 
   .profile-pic {
-    width: 180px;
+    width: 210px;
     margin-left: 0;
     margin-bottom: 20px;
   }
@@ -307,16 +307,13 @@ nav {
   }
 
   .profile-pic {
-    width: 160px;
+    width: 180px;
   }
 }
 
 /* small screens */
 @media (max-width: 360px) {
-  .profile-pic {
-    width: 140px;
-  }
-
+  
   .head1 {
     font-size: 1.6rem;
   }
