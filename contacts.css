@@ -288,36 +288,40 @@ input:focus, textarea:focus {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-body {
-  padding-top: 80px;
-}
+  body {
+    padding-top: 80px;
+  }
 
-.container {
-  padding: 25px;
-  width: 85%;
-}
+  .container {
+    padding: 25px;
+    width: 85%;
+  }
 
-.nav-menu {
-  gap: 15px;
-}
+  .nav-menu {
+    gap: 15px;
+  }
 
-.nav-link {
-  padding: 0.5rem 0.8rem;
-  font-size: 0.9rem;
-}
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+  }
 
-form {
-  padding: 1.5rem;
-  margin-top: 10px;
-}
+  form {
+    padding: 1.5rem;
+    margin-top: 10px;
+  }
 
-.hamburger-menu {
-  display: block;
-}
+  .hamburger-menu {
+    display: block;
+  }
 
-header nav {
-  display: none;
-}
+  header nav {
+    display: none;
+  }
+
+  p {
+    padding: 0 50px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -332,26 +336,26 @@ header nav {
 }
 
 .nav-link {
-  font-size: 0.85rem;
-  padding: 0.4rem 0.6rem;
-}
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+  }
 
-form {
-  padding: 1rem;
-}
+  form {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 360px) {
-nav {
-  top: 10px;
-}
+  nav {
+    top: 10px;
+  }
 
-.container {
-  padding: 15px;
-}
+  .container {
+    padding: 15px;
+  }
 
-.nav-link {
-  padding: 0.3rem 0.5rem;
-  font-size: 0.8rem;
-}
+  .nav-link {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+  }
 }
