@@ -49,15 +49,31 @@
   </header>
 
   <!-- Side Panel Mobile Only -->
-  <div class="side-panel fixed top-0 -right-[250px] w-[250px] bg-white shadow-[-2px_0_10px_rgba(0,0,0,0.1)] z-[2000] transition-all duration-500">
+  <div class="side-panel fixed top-0 -right-[250px] w-[250px] bg-white shadow-[-2px_0_10px_rgba(0,0,0,0.1)] z-[2000] transition-[right] duration-500 ease-in-out rounded-tl-2xl rounded-bl-2xl overflow-hidden">
     <div class="close-btn absolute top-4 right-4 text-[22px] cursor-pointer text-blue-600">
       <i class="fas fa-times"></i>
     </div>
-    <ul class="side-menu pt-[60px] list-none">
-      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="index.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-home"></i> Home</a></li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="about.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-user"></i> About</a></li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="techstack.html" class="text-blue-600 font-medium block transition-colors duration-200 hover:text-blue-600 active:text-blue-600"><i class="fas fa-code"></i> Tech Stack</a></li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="contacts.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-envelope"></i> Contact</a></li>
+    <ul class="side-menu pt-[60px] list-none m-0">
+      <li class="px-[25px] py-[15px] border-b border-gray-200">
+        <a href="index.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
+          <i class="fas fa-home mr-[5px] min-w-[10px] text-center"></i> Home
+        </a>
+      </li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200">
+        <a href="about.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
+          <i class="fas fa-user mr-[5px] min-w-[10px] text-center"></i> About
+        </a>
+      </li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200">
+        <a href="techstack.html" class="text-blue-600 font-medium block transition-colors duration-200 text-[18px]">
+          <i class="fas fa-code mr-[5px] min-w-[10px] text-center"></i> Tech Stack
+        </a>
+      </li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200">
+        <a href="contacts.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
+          <i class="fas fa-envelope mr-[5px] min-w-[10px] text-center"></i> Contact
+        </a>
+      </li>
     </ul>
   </div>
   <div class="overlay hidden fixed inset-0 bg-black/50 z-[1500]"></div>

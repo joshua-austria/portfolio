@@ -222,16 +222,21 @@
     background-color: white;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 2000;
-    transition: right 0.5s ease;
+    transition: right 0.5s ease-in-out;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    overflow: hidden;
   }
 
   .side-panel.active { right: 0; }
 
   .close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 22px;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.375rem;
     cursor: pointer;
     color: #007bff;
   }
@@ -239,19 +244,27 @@
   .side-menu {
     padding: 60px 0 0 0;
     list-style: none;
+    margin: 0;
   }
 
   .side-menu li {
     padding: 15px 25px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #E5E7EB;
   }
 
   .side-menu li a {
     color: #333;
     text-decoration: none;
     font-weight: 500;
+    font-size: 18px;
     display: block;
     transition: color 0.2s;
+  }
+
+  .side-menu li a i {
+    margin-right: 5px;
+    min-width: 10px;
+    text-align: center;
   }
 
   .side-menu li a:hover,
@@ -304,7 +317,7 @@
   header nav {
     display: none;
   }
-}
+  }
 
   @media (max-width: 480px) {
   .container {
@@ -325,7 +338,7 @@
   form {
     padding: 1rem;
   }
-}
+  }
 
   @media (max-width: 360px) {
   nav {
