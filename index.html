@@ -3,66 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Austria</title>
+  <title>Joshua Austria | Home</title>
   <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/36aa0c39de.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="max-md:pt-[70px]">
   <div id="particles-js"></div>
   <header>
     <h1 class="header-title">Joshua Austria</h1>
-    <!-- Hamburger Icon -->
-      <div class="hamburger-menu">
-        <div class="hamburger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+    
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu hidden max-md:block absolute top-5 right-5 cursor-pointer z-[1000]">
+      <div class="hamburger-icon w-[30px] h-[24px] relative">
+        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-0"></span>
+        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-[10px]"></span>
+        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-[20px]"></span>
       </div>
-      <nav>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link active">
-              <i class="fas fa-home"></i> Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">
-              <i class="fas fa-user"></i> About
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="techstack.html" class="nav-link">
-              <i class="fas fa-code"></i> Tech Stack
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contacts.html" class="nav-link">
-              <i class="fas fa-envelope"></i> Contacts
-            </a>
-          </li>
-        </ul>
-      </nav>
+    </div>
+    <!-- Navigation Bar -->
+    <nav class="max-md:hidden">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">
+            <i class="fas fa-home"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">
+            <i class="fas fa-user"></i> About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="techstack.html" class="nav-link">
+            <i class="fas fa-code"></i> Tech Stack
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="contacts.html" class="nav-link">
+            <i class="fas fa-envelope"></i> Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Side Panel Mobile Only -->
-  <div class="side-panel">
-    <div class="close-btn">
+  <!-- Side Panel -->
+  <div class="side-panel fixed top-0 -right-[250px] w-[250px] bg-white shadow-[-2px_0_10px_rgba(0,0,0,0.1)] z-[2000] transition-all duration-500">
+    <div class="close-btn absolute top-4 right-4 text-[22px] cursor-pointer text-blue-600">
       <i class="fas fa-times"></i>
     </div>
-    <ul class="side-menu">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="techstack.html">Tech Stack</a></li>
-      <li><a href="contacts.html">Contact</a></li>
+    <ul class="side-menu pt-[60px] list-none">
+      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="index.html" class="text-blue-600 font-medium block transition-colors duration-200 hover:text-blue-600 active:text-blue-600"><i class="fas fa-home"></i> Home</a></li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="about.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-user"></i> About</a></li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="techstack.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-code"></i> Tech Stack</a></li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="contacts.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
   </div>
-  <div class="overlay"></div>
+  <div class="overlay hidden fixed inset-0 bg-black/50 z-[1500]"></div>
   
   <section id="home">
     <div class="home-content">
       <h1 class="head1">Hi, I am <span class="highlight">Joshua Austria</span></h1>
-      <h2 class="head2">Aspiring Full Stack Developer</h2>
+      <h2 class="head2 font-bold">Aspiring Full Stack Developer</h2>
       <p>A passionate IT student exploring web development.</p>
     </div>
     <img src="images/Portprofile.jpg" alt="Profile Pic" class="profile-pic">

@@ -3,22 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Austria</title>
+  <title>Joshua Austria | Tech Stacks</title>
   <link rel="stylesheet" href="techstack.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/36aa0c39de.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div id="particles-js"></div>
   <header>
     <h1 class="header-title">Joshua Austria</h1>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon">
-        <span></span>
-        <span></span>
-        <span></span>
+
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu hidden max-md:block absolute top-5 right-5 cursor-pointer z-[1000]">
+      <div class="hamburger-icon w-[30px] h-[24px] relative">
+        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 ease-in-out top-0"></span>
+        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 ease-in-out top-[10px]"></span>
+        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 ease-in-out top-[20px]"></span>
       </div>
     </div>
-    <nav>
+    <!-- Navigation Bar -->
+    <nav class="max-md:hidden">
       <ul class="nav-menu">
         <li class="nav-item">
           <a href="index.html" class="nav-link">
@@ -37,7 +41,7 @@
         </li>
         <li class="nav-item">
           <a href="contacts.html" class="nav-link">
-            <i class="fas fa-envelope"></i> Contacts
+            <i class="fas fa-envelope"></i> Contact
           </a>
         </li>
       </ul>
@@ -45,36 +49,38 @@
   </header>
 
   <!-- Side Panel Mobile Only -->
-  <div class="side-panel">
-    <div class="close-btn">
+  <div class="side-panel fixed top-0 -right-[250px] w-[250px] bg-white shadow-[-2px_0_10px_rgba(0,0,0,0.1)] z-[2000] transition-all duration-500">
+    <div class="close-btn absolute top-4 right-4 text-[22px] cursor-pointer text-blue-600">
       <i class="fas fa-times"></i>
     </div>
-    <ul class="side-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="techstack.html" class="active">Tech Stack</a></li>
-      <li><a href="contacts.html">Contact</a></li>
+    <ul class="side-menu pt-[60px] list-none">
+      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="index.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-home"></i> Home</a></li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="about.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-user"></i> About</a></li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="techstack.html" class="text-blue-600 font-medium block transition-colors duration-200 hover:text-blue-600 active:text-blue-600"><i class="fas fa-code"></i> Tech Stack</a></li>
+      <li class="px-[25px] py-[15px] border-b border-gray-200"><a href="contacts.html" class="text-gray-700 font-medium block transition-colors duration-200 hover:text-blue-600"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
   </div>
-  <div class="overlay"></div>
+  <div class="overlay hidden fixed inset-0 bg-black/50 z-[1500]"></div>
 
-  <h1 class="techstack-title">Tech Stack</h1>
+  <h1 class="techstack-title font-bold">Tech Stack</h1>
   <section id="techstack">
-    <h2>Programming Languages</h2>
-    <p>These are all the programming languages I've learned so far</p>
+    <h2 class="text-2xl font-bold">Languages & Frameworks</h2>
+    <p>These are all the programming tools I've learned so far</p>
     <ul class="techstack-list">
       <li class="tech-item"><img src="images/c-logo.png" alt="C Language" class="tech-image">C</li>
       <li class="tech-item"><img src="images/java-logo.png" alt="Java Language" class="tech-image">Java</li>
       <li class="tech-item"><img src="images/python-logo.png" alt="Python Language" class="tech-image">Python</li>
       <li class="tech-item"><img src="images/mysql-logo.png" alt="MySql Language" class="tech-image">MYSQL</li>
-      <li class="tech-item"><img src="images/html5-logo.png" alt="HTML" class="tech-image">HTML</li>
+      <li class="tech-item"><img src="images/html-logo.png" alt="HTML" class="tech-image">HTML</li>
       <li class="tech-item"><img src="images/css-logo.png" alt="CSS" id="css-logo" class="tech-image">CSS</li>
       <li class="tech-item"><img src="images/javascript-logo.png" alt="Javascript Language" class="tech-image">JavaScript</li>
+      <li class="tech-item"><img src="images/bootstrap-logo.png" alt="Bootstrap" class="tech-image">Bootstrap</li>
+      <li class="tech-item"><img src="images/tailwind-logo.png" alt="Tailwind CSS" class="tech-image">Tailwind CSS</li>
     </ul>
   </section>
 
   <section id="techstack-tools">
-    <h2>Dev Tools</h2>
+    <h2 class="text-2xl font-bold">Dev Tools</h2>
     <p>These are all the development tools I've learned and used so far</p>
     <ul class="techstack-list">
         <li class="tech-item"><img src="images/intellij-logo.png" alt="IntelliJ" class="tech-image">IntelliJ</li>

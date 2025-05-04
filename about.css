@@ -93,13 +93,13 @@ section {
   margin-top: 150px;
 }
 
-.About {
+#AboutTitle {
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
 
-p {
-  font-size: 16px;
+.paragraph {
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 1em;
   text-align: justify;
@@ -114,169 +114,10 @@ p {
   z-index: -1; 
 }
 
-/* Hamburger Menu Styles */
-.hamburger-menu {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    z-index: 1000;
+.side-panel.active {
+  right: 0;
 }
 
-.hamburger-icon {
-    width: 30px;
-    height: 24px;
-    position: relative;
-}
-
-.hamburger-icon span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #007bff;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-}
-
-.hamburger-icon span:nth-child(1) { top: 0px; }
-.hamburger-icon span:nth-child(2) { top: 10px; }
-.hamburger-icon span:nth-child(3) { top: 20px; }
-
-/* Side Panel Styles */
-.side-panel {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: white;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 2000;
-    transition: right 0.3s ease;
-}
-
-.side-panel.active { right: 0; }
-
-.close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 22px;
-    cursor: pointer;
-    color: #007bff;
-}
-
-.side-menu {
-    padding: 60px 0 0 0;
-    list-style: none;
-}
-
-.side-menu li {
-    padding: 15px 25px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.side-menu li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    display: block;
-    transition: color 0.2s;
-}
-
-.side-menu li a:hover,
-.side-menu li a.active {
-    color: #007bff;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1500;
-    display: none;
-}
-
-.overlay.active { display: block; }
-
-/* Responsive Breakpoints */
-/* tablet screens */
-@media (max-width: 768px) {
-  body {
-    padding-top: 80px;
-  }
-
-  section {
-    margin-top: 120px;
-    padding: 25px;
-    width: 85%;
-  }
-
-  .nav-menu {
-    gap: 15px;
-  }
-
-  .nav-link {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.9rem;
-  }
-
-  .About {
-    font-size: 1.5rem;
-  }
-
-  .hamburger-menu {
-      display: block;
-  }
-  
-  header nav {
-      display: none;
-  }
-}
-/* mobile screens */
-@media (max-width: 480px) {
-  section {
-    margin-top: 100px;
-    padding: 20px;
-    width: 90%;
-  }
-
-  .nav-menu {
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .nav-link {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.6rem;
-  }
-
-  .About {
-    font-size: 1.3rem;
-  }
-}
-/* small screens */
-@media (max-width: 360px) {
-
-  nav {
-    top: 10px;
-  }
-
-  section {
-    margin-top: 90px;
-    padding: 15px;
-  }
-
-  .nav-link {
-    padding: 0.3rem 0.5rem;
-    font-size: 0.8rem;
-  }
+.overlay.active {
+  display: block;
 }
