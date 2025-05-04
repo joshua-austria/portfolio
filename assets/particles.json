@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 70,
       "density": {
         "enable": true,
         "value_area": 800
@@ -54,7 +54,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 3,
+      "speed": 1.5,
       "direction": "none",
       "random": false,
       "straight": false,
