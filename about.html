@@ -4,91 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joshua Austria | About</title>
-  <link rel="stylesheet" href="about.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/36aa0c39de.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Meet Joshua Austria, an Information Technology student working toward a career in front-end and full-stack development.">
+  <meta name="color-scheme" content="light dark">
+  <script src="theme.js?v=2"></script>
+  <link rel="stylesheet" href="common.css?v=4">
+  <link rel="stylesheet" href="about.css?v=2">
 </head>
-<body class="max-md:pt-[80px]">
-  <div id="particles-js"></div>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="particles-js" aria-hidden="true"></div>
   <header>
-    <h1 class="header-title">Joshua Austria</h1>
-    
-    <!-- Hamburger Menu -->
-    <div class="hamburger-menu hidden max-md:block absolute top-5 right-5 cursor-pointer z-[1000]">
-      <div class="hamburger-icon w-[30px] h-[24px] relative">
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-0"></span>
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-[10px]"></span>
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-[20px]"></span>
+    <div class="header-inner">
+      <a class="header-title" href="index.html">Joshua Austria</a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+          <li><a href="techstack.html" class="nav-link">Skills &amp; Tools</a></li>
+          <li><a href="contacts.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span aria-hidden="true">&#9789;</span></button>
+        <button class="hamburger-menu" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
       </div>
     </div>
-    <!-- Navigation Bar -->
-    <nav class="max-md:hidden">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link">
-            <i class="fas fa-home"></i> Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link active">
-            <i class="fas fa-user"></i> About
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="techstack.html" class="nav-link">
-            <i class="fas fa-code"></i> Tech Stack
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contacts.html" class="nav-link">
-            <i class="fas fa-envelope"></i> Contact
-          </a>
-        </li>
+  </header>
+  <dialog id="mobile-menu" class="side-panel" aria-label="Main navigation">
+    <button class="close-btn" type="button" aria-label="Close navigation" autofocus><span aria-hidden="true">&times;</span></button>
+    <nav aria-label="Mobile navigation">
+      <ul class="side-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+        <li><a href="techstack.html" class="nav-link">Skills &amp; Tools</a></li>
+        <li><a href="contacts.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </dialog>
 
-  <!-- Side Panel -->
-  <div class="side-panel fixed top-0 -right-[250px] w-[250px] bg-white shadow-[-2px_0_10px_rgba(0,0,0,0.1)] z-[2000] transition-[right] duration-500 ease-in-out rounded-tl-2xl rounded-bl-2xl overflow-hidden">
-    <div class="close-btn absolute top-4 right-4 text-[22px] cursor-pointer text-blue-600">
-      <i class="fas fa-times"></i>
-    </div>
-    <ul class="side-menu pt-[60px] list-none m-0">
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="index.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-home mr-[5px] min-w-[10px] text-center"></i> Home
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="about.html" class="text-blue-600 font-medium block transition-colors duration-200 text-[18px]">
-          <i class="fas fa-user mr-[5px] min-w-[10px] text-center"></i> About
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="techstack.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-code mr-[5px] min-w-[10px] text-center"></i> Tech Stack
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="contacts.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-envelope mr-[5px] min-w-[10px] text-center"></i> Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="overlay hidden fixed inset-0 bg-black/50 z-[1500]"></div>
-  
-  <section id="about" class="mt-[150px] px-[30px] w-[90%] max-md:mt-[100px] max-md:px-5 max-md:w-[90%] max-[360px]:mt-[90px] max-[360px]:px-[15px]">
-    <h2 id = "AboutTitle" class="text-[1.8rem] font-bold mb-4 max-[480px]:text-[1.3rem]">About Me</h2>
-    <p class ="paragraph">I'm a 3rd-year Information Technology student with a passion for designing and developing websites. I enjoy combining creativity with technical skills 
+  <main id="main-content" tabindex="-1" class="about-page">
+  <section id="about" aria-labelledby="about-title">
+    <h1 id="about-title">About Me</h1>
+    <p class="paragraph">I'm a 4th-year Information Technology student with a passion for designing and developing websites. I enjoy combining creativity with technical skills
       to build user-friendly and visually engaging websites.</p>
 
-    <p class ="paragraph">My dream is to become a Front-End Developer, but I see it as just the starting point of my career. 
+    <p class="paragraph">My dream is to become a Front-End Developer, but I see it as just the starting point of my career.
       Someday, I aspire to grow into a Full-Stack Developer, expanding my skills in both front-end and back-end development.</p>
   </section>
+  </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="app.js"></script>
-  <script src="hamburger.js"></script>
+  <script src="particles.js"></script>
+  <script src="app.js?v=3"></script>
+  <script src="hamburger.js?v=3"></script>
 </body>
 </html>

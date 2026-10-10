@@ -1,4 +1,3 @@
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', 'assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
-});
+if (typeof particlesJS !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  particlesJS.load('particles-js', 'assets/particles.json?v=2');
+}

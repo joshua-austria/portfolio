@@ -3,146 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Austria | Tech Stack</title>
-  <link rel="stylesheet" href="techstack.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/36aa0c39de.js" crossorigin="anonymous"></script>
+  <title>Joshua Austria | Skills &amp; Tools</title>
+  <meta name="description" content="Joshua Austria's skills and tools for web development, mobile apps, backend development, databases, and hosting.">
+  <meta name="color-scheme" content="light dark">
+  <script src="theme.js?v=2"></script>
+  <link rel="stylesheet" href="common.css?v=4">
+  <link rel="stylesheet" href="techstack.css?v=4">
 </head>
 <body>
-  <div id="particles-js"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="particles-js" aria-hidden="true"></div>
   <header>
-    <h1 class="header-title">Joshua Austria</h1>
-
-    <!-- Hamburger Menu -->
-    <div class="hamburger-menu hidden max-md:block absolute top-5 right-5 cursor-pointer z-[1000]">
-      <div class="hamburger-icon w-[30px] h-[24px] relative">
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 ease-in-out top-0"></span>
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 ease-in-out top-[10px]"></span>
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 ease-in-out top-[20px]"></span>
+    <div class="header-inner">
+      <a class="header-title" href="index.html">Joshua Austria</a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="techstack.html" class="nav-link active" aria-current="page">Skills &amp; Tools</a></li>
+          <li><a href="contacts.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span aria-hidden="true">&#9789;</span></button>
+        <button class="hamburger-menu" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
       </div>
     </div>
-    <!-- Navigation Bar -->
-    <nav class="max-md:hidden">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link">
-            <i class="fas fa-home"></i> Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">
-            <i class="fas fa-user"></i> About
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="techstack.html" class="nav-link active">
-            <i class="fas fa-code"></i> Tech Stack
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contacts.html" class="nav-link">
-            <i class="fas fa-envelope"></i> Contact
-          </a>
-        </li>
+  </header>
+  <dialog id="mobile-menu" class="side-panel" aria-label="Main navigation">
+    <button class="close-btn" type="button" aria-label="Close navigation" autofocus><span aria-hidden="true">&times;</span></button>
+    <nav aria-label="Mobile navigation">
+      <ul class="side-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="techstack.html" class="nav-link active" aria-current="page">Skills &amp; Tools</a></li>
+        <li><a href="contacts.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </dialog>
 
-  <!-- Side Panel Mobile Only -->
-  <div class="side-panel fixed top-0 -right-[250px] w-[250px] bg-white shadow-[-2px_0_10px_rgba(0,0,0,0.1)] z-[2000] transition-[right] duration-500 ease-in-out rounded-tl-2xl rounded-bl-2xl overflow-hidden">
-    <div class="close-btn absolute top-4 right-4 text-[22px] cursor-pointer text-blue-600">
-      <i class="fas fa-times"></i>
+  <main id="main-content" tabindex="-1" class="skills-page" aria-labelledby="skills-title">
+    <div class="skills-heading">
+      <h1 id="skills-title">Skills &amp; Tools</h1>
+      <p>The technologies I've learned and used, grouped by what I build with them.</p>
     </div>
-    <ul class="side-menu pt-[60px] list-none m-0">
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="index.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-home mr-[5px] min-w-[10px] text-center"></i> Home
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="about.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-user mr-[5px] min-w-[10px] text-center"></i> About
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="techstack.html" class="text-blue-600 font-medium block transition-colors duration-200 text-[18px]">
-          <i class="fas fa-code mr-[5px] min-w-[10px] text-center"></i> Tech Stack
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="contacts.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-envelope mr-[5px] min-w-[10px] text-center"></i> Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="overlay hidden fixed inset-0 bg-black/50 z-[1500]"></div>
+    <section class="skill-group" aria-labelledby="web-development-title">
+      <h2 id="web-development-title">Web Development</h2>
+      <ul class="skills-list">
+        <li class="skill-item">
+          <img src="images/html-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>HTML</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/css-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>CSS</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/javascript-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>JavaScript</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/react-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>React</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/nextjs-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Next.js</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/tailwind-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Tailwind CSS</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/bootstrap-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Bootstrap</span>
+        </li>
+      </ul>
+    </section>
+    <section class="skill-group" aria-labelledby="mobile-development-title">
+      <h2 id="mobile-development-title">Mobile Development</h2>
+      <ul class="skills-list">
+        <li class="skill-item">
+          <img src="images/java-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Java</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/dart-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Dart</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/flutter-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Flutter</span>
+        </li>
+      </ul>
+    </section>
+    <section class="skill-group" aria-labelledby="backend-databases-title">
+      <h2 id="backend-databases-title">Backend &amp; Databases</h2>
+      <ul class="skills-list">
+        <li class="skill-item">
+          <img src="images/nodejs-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Node.js</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/express-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Express</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/mysql-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>MySQL</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/mongodb-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>MongoDB</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/firebase-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Firebase</span>
+        </li>
+      </ul>
+    </section>
+    <section class="skill-group" aria-labelledby="other-languages-title">
+      <h2 id="other-languages-title">Other Languages</h2>
+      <ul class="skills-list">
+        <li class="skill-item">
+          <img src="images/c-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>C</span>
+        </li>
+        <li class="skill-item">
+          <img class="skill-icon-python" src="images/python-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Python</span>
+        </li>
+      </ul>
+    </section>
+    <section class="skill-group" aria-labelledby="developer-tools-title">
+      <h2 id="developer-tools-title">Developer Tools &amp; Hosting</h2>
+      <ul class="skills-list">
+        <li class="skill-item">
+          <img src="images/vscode-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>VS Code</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/intellij-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>IntelliJ</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/androidstudio-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Android Studio</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/git-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Git</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/postman-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Postman</span>
+        </li>
+        <li class="skill-item">
+          <img src="images/render-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Render</span>
+        </li>
+        <li class="skill-item">
+          <img class="skill-icon-dark" src="images/vercel-logo.png" alt="" width="64" height="64" loading="lazy">
+          <span>Vercel</span>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-  <h1 class="techstack-title font-bold">Tech Stack</h1>
-  <section id="techstack">
-    <h2 class="text-2xl font-bold mb-1">Languages & Frameworks</h2>
-    <p class="mb-2">These are all the programming tools I've learned so far</p>
-    <ul class="techstack-list">
-      <!-- Row 1 -->
-      <div class="tech-row">
-        <li class="tech-item"><img src="images/c-logo.png" alt="C Language" class="tech-image">C</li>
-        <li class="tech-item"><img src="images/java-logo.png" alt="Java Language" class="tech-image">Java</li>
-        <li class="tech-item"><img src="images/python-logo.png" alt="Python Language" class="tech-image">Python</li>
-        <li class="tech-item"><img src="images/mysql-logo.png" alt="MySql Language" class="tech-image">MySQL</li>
-      </div>
-      <!-- Row 2 -->
-      <div class="tech-row">
-        <li class="tech-item"><img src="images/html-logo.png" alt="HTML" class="tech-image">HTML</li>
-        <li class="tech-item"><img src="images/css-logo.png" alt="CSS" id="css-logo" class="tech-image">CSS</li>
-        <li class="tech-item"><img src="images/javascript-logo.png" alt="Javascript Language" class="tech-image">JavaScript</li>
-        <li class="tech-item"><img src="images/tailwind-logo.png" alt="Tailwind CSS" class="tech-image">Tailwind CSS</li>
-      </div>
-      <!-- Row 3 -->
-      <div class="tech-row">
-        <li class="tech-item"><img src="images/bootstrap-logo.png" alt="Bootstrap" class="tech-image">Bootstrap</li>
-        <li class="tech-item"><img src="images/dart-logo.png" alt="Dart Language" class="tech-image">Dart</li>
-        <li class="tech-item"><img src="images/flutter-logo.png" alt="Flutter" class="tech-image">Flutter</li>
-        <li class="tech-item"><img src="images/firebase-logo.png" alt="Firebase" class="tech-image">Firebase</li>
-      </div>
-      <!-- Row 4 -->
-      <div class="tech-row">
-        <li class="tech-item"><img src="images/nodejs-logo.png" alt="Node.js" class="tech-image">Node.js</li>
-        <li class="tech-item"><img src="images/express-logo.png" alt="Express" class="tech-image">Express</li>
-        <li class="tech-item"><img src="images/postman-logo.png" alt="Postman" class="tech-image">Postman</li>
-      </div>
-      <!-- Row 5 -->
-      <div class="tech-row">
-        <li class="tech-item"><img src="images/mongodb-logo.png" alt="MongoDB" class="tech-image">MongoDB</li>
-        <li class="tech-item"><img src="images/render-logo.png" alt="Render" class="tech-image">Render</li>
-      </div>
-    </ul>
-  </section>
-
-  <section id="techstack-tools">
-    <h2 class="text-2xl font-bold">Dev Tools</h2>
-    <p>These are all the development tools I've learned and used so far</p>
-    <ul class="devtools-list">
-      <li class="dev-item">
-        <img src="images/intellij-logo.png" alt="IntelliJ" class="dev-image">
-        <span>IntelliJ</span>
-      </li>
-      <li class="dev-item">
-        <img src="images/vscode-logo.png" alt="VS Code" class="dev-image">
-        <span>VS Code</span>
-      </li>
-      <li class="dev-item">
-        <img src="images/androidstudio-logo.png" alt="Android Studio" class="dev-image">
-        <span>Android Studio</span>
-      </li>
-      <li class="dev-item">
-        <img src="images/git-logo.png" alt="Git" class="dev-image">
-        <span>Git</span>
-      </li>
-    </ul>
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="app.js"></script>
-  <script src="hamburger.js"></script>
+  <script src="particles.js"></script>
+  <script src="app.js?v=3"></script>
+  <script src="hamburger.js?v=3"></script>
 </body>
 </html>

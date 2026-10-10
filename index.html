@@ -4,91 +4,164 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joshua Austria | Home</title>
-  <link rel="stylesheet" href="index.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/36aa0c39de.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Joshua Austria's portfolio: LitterSense, Csoles Connect, Bytes Cookbook, and certifications in web development, Microsoft Office, Cisco Packet Tracer, and IoT.">
+  <meta name="color-scheme" content="light dark">
+  <script src="theme.js?v=2"></script>
+  <link rel="stylesheet" href="common.css?v=4">
+  <link rel="stylesheet" href="index.css?v=3">
 </head>
-<body class="max-md:pt-[70px]">
-  <div id="particles-js"></div>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="particles-js" aria-hidden="true"></div>
   <header>
-    <h1 class="header-title">Joshua Austria</h1>
-    
-    <!-- Hamburger Menu -->
-    <div class="hamburger-menu hidden max-md:block absolute top-5 right-5 cursor-pointer z-[1000]">
-      <div class="hamburger-icon w-[30px] h-[24px] relative">
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-0"></span>
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-[10px]"></span>
-        <span class="block absolute h-[3px] w-full bg-blue-600 rounded-full transition-all duration-300 top-[20px]"></span>
+    <div class="header-inner">
+      <a class="header-title" href="index.html">Joshua Austria</a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="techstack.html" class="nav-link">Skills &amp; Tools</a></li>
+          <li><a href="contacts.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span aria-hidden="true">&#9789;</span></button>
+        <button class="hamburger-menu" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
       </div>
     </div>
-    <!-- Navigation Bar -->
-    <nav class="max-md:hidden">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link active">
-            <i class="fas fa-home"></i> Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">
-            <i class="fas fa-user"></i> About
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="techstack.html" class="nav-link">
-            <i class="fas fa-code"></i> Tech Stack
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contacts.html" class="nav-link">
-            <i class="fas fa-envelope"></i> Contact
-          </a>
-        </li>
+  </header>
+  <dialog id="mobile-menu" class="side-panel" aria-label="Main navigation">
+    <button class="close-btn" type="button" aria-label="Close navigation" autofocus><span aria-hidden="true">&times;</span></button>
+    <nav aria-label="Mobile navigation">
+      <ul class="side-menu">
+        <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="techstack.html" class="nav-link">Skills &amp; Tools</a></li>
+        <li><a href="contacts.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </dialog>
 
-  <!-- Side Panel -->
-  <div class="side-panel fixed top-0 -right-[250px] w-[250px] bg-white shadow-[-2px_0_10px_rgba(0,0,0,0.1)] z-[2000] transition-[right] duration-500 ease-in-out rounded-tl-2xl rounded-bl-2xl overflow-hidden">
-    <div class="close-btn absolute top-4 right-4 text-[22px] cursor-pointer text-blue-600">
-      <i class="fas fa-times"></i>
-    </div>
-    <ul class="side-menu pt-[60px] list-none m-0">
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="index.html" class="text-blue-600 font-medium block transition-colors duration-200 text-[18px]">
-          <i class="fas fa-home mr-[5px] min-w-[10px] text-center"></i> Home
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="about.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-user mr-[5px] min-w-[10px] text-center"></i> About
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="techstack.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-code mr-[5px] min-w-[10px] text-center"></i> Tech Stack
-        </a>
-      </li>
-      <li class="px-[25px] py-[15px] border-b border-gray-200">
-        <a href="contacts.html" class="text-gray-700 font-medium block transition-colors duration-200 text-[18px] hover:text-blue-600">
-          <i class="fas fa-envelope mr-[5px] min-w-[10px] text-center"></i> Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="overlay hidden fixed inset-0 bg-black/50 z-[1500]"></div>
-  
-  <section id="home">
+  <main id="main-content" tabindex="-1">
+  <section id="home" aria-labelledby="home-title">
     <div class="home-content">
-      <h1 class="head1">Hi, I am <span class="highlight">Joshua Austria</span></h1>
-      <h2 class="head2 font-bold">Aspiring Full Stack Developer</h2>
+      <h1 id="home-title" class="head1">Hi, I am <span class="highlight">Joshua Austria</span></h1>
+      <h2 class="head2">Aspiring Full Stack Developer</h2>
       <p>A passionate IT student exploring web development.</p>
+      <div class="hero-actions">
+        <a class="portfolio-button" href="#projects">View My Projects</a>
+        <a class="portfolio-button portfolio-button-secondary" href="#certifications">Certifications &amp; Badges</a>
+      </div>
     </div>
-    <img src="images/Portprofile.jpg" alt="Profile Pic" class="profile-pic">
+    <img src="images/Portprofile.jpg" alt="Joshua Austria" class="profile-pic">
   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script src="app.js"></script>
-  <script src="hamburger.js"></script>
+  <section id="projects" class="portfolio-section" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <p class="section-eyebrow">Putting learning into practice</p>
+      <h2 id="projects-title">Selected Projects</h2>
+      <p>Team projects and coursework across web development, mobile apps, and IoT.</p>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-visual project-visual-littersense">
+          <img src="images/projects/littersense-logo.svg" alt="LitterSense logo" width="112" height="112" loading="lazy">
+          <span class="project-type">Team capstone</span>
+        </div>
+        <div class="project-details">
+          <h3>LitterSense Web App</h3>
+          <p>An IoT-connected web app for monitoring cats' litter box activity. Our capstone brings together cat profiles, visit tracking, sensor readings, and health reports in one dashboard.</p>
+          <ul class="project-tags" aria-label="LitterSense technologies">
+            <li>Next.js</li><li>React</li><li>Firebase</li><li>IoT</li>
+          </ul>
+          <a class="project-link" href="https://github.com/John-Orlie-Mascardo/LitterSense-CSP-WebApp" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-visual project-visual-csoles">
+          <img src="images/projects/csoles-logo.png" alt="Csoles Connect logo" width="160" height="112" loading="lazy">
+          <span class="project-type">Team e-commerce project</span>
+        </div>
+        <div class="project-details">
+          <h3>Csoles Connect <span class="project-alias">(CConnect)</span></h3>
+          <p>A Flutter shopping app with a Node.js backend. Customers can browse products, manage their cart, and place orders, while store owners manage products and orders with real-time chat support.</p>
+          <ul class="project-tags" aria-label="Csoles Connect technologies">
+            <li>Flutter</li><li>Node.js</li><li>MongoDB</li><li>Firebase</li>
+          </ul>
+          <a class="project-link" href="https://github.com/John-Orlie-Mascardo/cconnect-frontend" target="_blank" rel="noopener noreferrer">Frontend on GitHub <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <a class="project-link" href="https://github.com/John-Orlie-Mascardo/cconnect-backend" target="_blank" rel="noopener noreferrer">Backend on GitHub <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <p class="repository-note">Repository access may be required. <a href="contacts.html">Contact me for details.</a></p>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-visual project-visual-bytes">
+          <img src="images/projects/bytes-logo.png" alt="Bytes Cookbook logo" width="160" height="112" loading="lazy">
+          <span class="project-type">Android midterm project</span>
+        </div>
+        <div class="project-details">
+          <h3>Bytes Cookbook</h3>
+          <p>An Android recipe app that helps users find dishes using ingredients they already have. Select ingredients, filter recipes by category, and explore Filipino dishes with cooking instructions.</p>
+          <ul class="project-tags" aria-label="Bytes Cookbook technologies">
+            <li>Java</li><li>Android</li><li>Android Studio</li>
+          </ul>
+          <a class="project-link" href="https://github.com/joshua-austria/Bytes-Cookbook-Midterm-Project" target="_blank" rel="noopener noreferrer">GitHub (private repository) <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <p class="repository-note">Repository access is required. <a href="contacts.html">Contact me for details.</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="certifications" class="portfolio-section" aria-labelledby="certifications-title">
+    <div class="section-heading">
+      <p class="section-eyebrow">Learning milestones</p>
+      <h2 id="certifications-title">Certifications &amp; Badges</h2>
+      <p>Credentials in web development, productivity tools, networking, and the Internet of Things.</p>
+    </div>
+    <div class="certifications-grid">
+      <article class="certification-card">
+        <img src="images/badges/it-specialist-html-and-css.png" alt="IT Specialist HTML and CSS badge" width="144" height="144" loading="lazy">
+        <h3>IT Specialist: HTML and CSS</h3>
+        <p class="credential-issuer">Certiport / Pearson</p>
+        <p class="credential-date">Issued <time datetime="2026-02-04">February 4, 2026</time></p>
+        <a class="credential-link" href="assets/certificates/html-and-css.pdf" target="_blank" rel="noopener noreferrer" aria-label="View IT Specialist HTML and CSS certificate PDF, opens in a new tab">View Certificate <span class="file-label">PDF &#8599;</span></a>
+      </article>
+      <article class="certification-card">
+        <img src="images/badges/introduction-to-iot.png" alt="Cisco Networking Academy Introduction to Internet of Things badge" width="144" height="144" loading="lazy">
+        <h3>Introduction to IoT and Digital Transformation</h3>
+        <p class="credential-issuer">Cisco Networking Academy</p>
+        <p class="credential-date">Issued <time datetime="2026-02-18">February 18, 2026</time></p>
+        <a class="credential-link" href="assets/certificates/introduction-to-iot-and-digital-transformation.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Introduction to IoT and Digital Transformation course certificate PDF, opens in a new tab">View Certificate <span class="file-label">PDF &#8599;</span></a>
+        <a class="credential-link credential-link-secondary" href="assets/certificates/introduction-to-iot.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Introduction to Internet of Things badge credential PDF, opens in a new tab">Badge Credential <span class="file-label">PDF &#8599;</span></a>
+      </article>
+      <article class="certification-card">
+        <img class="certificate-preview" src="images/badges/packet-tracer-certificate.png" alt="Preview of Joshua Austria's Cisco Packet Tracer completion certificate" width="600" height="407" loading="lazy">
+        <h3>Getting Started with Cisco Packet Tracer</h3>
+        <p class="credential-issuer">Cisco Networking Academy</p>
+        <p class="credential-date">Completed <time datetime="2026-01-29">January 29, 2026</time></p>
+        <a class="credential-link" href="assets/certificates/getting-started-with-cisco-packet-tracer.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Getting Started with Cisco Packet Tracer certificate PDF, opens in a new tab">View Certificate <span class="file-label">PDF &#8599;</span></a>
+      </article>
+      <article class="certification-card">
+        <img src="images/badges/microsoft-office-specialist-word-associate-office-2019.png" alt="Microsoft Office Specialist Word Associate badge" width="144" height="144" loading="lazy">
+        <h3>Microsoft Office Specialist: Word 2019 Associate</h3>
+        <p class="credential-issuer">Microsoft / Certiport</p>
+        <p class="credential-date">Issued <time datetime="2024-03-13">March 13, 2024</time></p>
+        <a class="credential-link" href="assets/certificates/word-2019-associate.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Microsoft Word 2019 Associate certificate PDF, opens in a new tab">View Certificate <span class="file-label">PDF &#8599;</span></a>
+      </article>
+      <article class="certification-card">
+        <img src="images/badges/microsoft-office-specialist-powerpoint-associate-office-2019.png" alt="Microsoft Office Specialist PowerPoint Associate badge" width="144" height="144" loading="lazy">
+        <h3>Microsoft Office Specialist: PowerPoint 2019 Associate</h3>
+        <p class="credential-issuer">Microsoft / Certiport</p>
+        <p class="credential-date">Issued <time datetime="2024-05-30">May 30, 2024</time></p>
+        <a class="credential-link" href="assets/certificates/powerpoint-2019-associate.pdf" target="_blank" rel="noopener noreferrer" aria-label="View Microsoft PowerPoint 2019 Associate certificate PDF, opens in a new tab">View Certificate <span class="file-label">PDF &#8599;</span></a>
+      </article>
+    </div>
+  </section>
+  </main>
+
+  <script src="particles.js"></script>
+  <script src="app.js?v=3"></script>
+  <script src="hamburger.js?v=3"></script>
 </body>
 </html>
