@@ -261,6 +261,34 @@
   line-height: 1.75;
 }
 
+.project-contribution {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.project-contribution strong { color: var(--text); }
+
+.recognition-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  text-align: left;
+}
+.recognition-preview { align-self: center; }
+.recognition-preview img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.recognition-details { align-self: center; }
+.recognition-details h3 { margin-bottom: 16px; }
+.recognition-details > p { color: var(--muted); }
+.recognition-details .credential-date { margin-top: 16px; }
+.recognition-details .credential-link { margin-top: 16px; }
+@media (max-width: 700px) {
+  .recognition-card { grid-template-columns: 1fr; padding: 20px; }
+}
+
 .project-tags {
   display: flex;
   flex-wrap: wrap;
