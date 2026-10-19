@@ -459,3 +459,8 @@ main a:focus-visible {
 }
 
 .certification-card img { background: #fff; padding: 6px; border-radius: 10px; }
+
+.projects-more {
+  margin-top: 32px;
+  text-align: center;
+}

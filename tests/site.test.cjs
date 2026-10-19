@@ -133,3 +133,52 @@ test('Escape restores page scrolling without waiting for the queued dialog close
   assert.equal(menu.open, false);
   assert.equal(body.style.overflow, 'auto');
 });
+
+test('the lightbox opens the clicked project image and wraps between that project\'s images', () => {
+  const handlers = {};
+  const on = (key) => (name, handler) => { handlers[key + ':' + name] = handler; };
+  const body = { style: { overflow: '' } };
+  const image = {};
+  const caption = {};
+  const box = {
+    open: false,
+    classList: { toggle() {} },
+    showModal() { this.open = true; },
+    close() { this.open = false; handlers['box:close'](); },
+    querySelector: (selector) => ({
+      img: image,
+      figcaption: caption,
+      '.lightbox-prev': { addEventListener: on('prev') },
+      '.lightbox-next': { addEventListener: on('next') },
+      '.lightbox-close': { addEventListener: on('close') },
+    })[selector],
+    addEventListener: on('box'),
+  };
+  const media = { querySelectorAll: () => links };
+  const links = ['a.webp', 'b.webp', 'c.webp'].map((href, i) => ({
+    href,
+    querySelector: () => ({ alt: 'Screen ' + i }),
+    closest: () => media,
+    addEventListener: on('link' + i),
+  }));
+  const document = {
+    body,
+    querySelector: () => box,
+    querySelectorAll: () => links,
+    addEventListener: (name, handler) => { if (name === 'DOMContentLoaded') handler(); },
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(root, 'lightbox.js'), 'utf8'), { document });
+
+  handlers['link2:click']({ preventDefault() {} });
+  assert.equal(box.open, true);
+  assert.equal(image.src, 'c.webp');
+  assert.equal(caption.textContent, 'Screen 2');
+  assert.equal(body.style.overflow, 'hidden');
+  handlers['next:click']();
+  assert.equal(image.src, 'a.webp');
+  handlers['box:keydown']({ key: 'ArrowLeft' });
+  assert.equal(image.src, 'c.webp');
+  handlers['close:click']();
+  assert.equal(box.open, false);
+  assert.equal(body.style.overflow, '');
+});
