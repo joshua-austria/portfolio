@@ -30,9 +30,6 @@
   line-height: 1.4;
 }
 .project-link-follow { margin-top: 0; }
-.project-download { gap: 8px; }
-.project-feature .project-download-note { margin: 8px 0 16px; }
-
 .project-gallery-label {
   margin-bottom: 10px;
   color: var(--text);
