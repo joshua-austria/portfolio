@@ -106,8 +106,6 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.12);
   color: #fff;
-  font-size: 2rem;
-  line-height: 1;
   cursor: pointer;
 }
 .lightbox button:hover { background: rgba(255, 255, 255, 0.24); }
