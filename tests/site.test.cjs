@@ -157,6 +157,7 @@ test('the lightbox opens the clicked project image and wraps between that projec
   const media = { querySelectorAll: () => links };
   const links = ['a.webp', 'b.webp', 'c.webp'].map((href, i) => ({
     href,
+    dataset: {},
     querySelector: () => ({ alt: 'Screen ' + i }),
     closest: () => media,
     addEventListener: on('link' + i),
@@ -181,4 +182,43 @@ test('the lightbox opens the clicked project image and wraps between that projec
   handlers['close:click']();
   assert.equal(box.open, false);
   assert.equal(body.style.overflow, '');
+});
+
+test('a standalone lightbox link opens alone with its own caption', () => {
+  const handlers = {};
+  const on = (key) => (name, handler) => { handlers[key + ':' + name] = handler; };
+  const image = {};
+  const caption = {};
+  let single = false;
+  const box = {
+    classList: { toggle: (name, value) => { if (name === 'lightbox-single') single = value; } },
+    showModal() {},
+    close() {},
+    querySelector: (selector) => ({
+      img: image,
+      figcaption: caption,
+      '.lightbox-prev': { addEventListener: on('prev') },
+      '.lightbox-next': { addEventListener: on('next') },
+      '.lightbox-close': { addEventListener: on('close') },
+    })[selector],
+    addEventListener: on('box'),
+  };
+  const link = {
+    href: 'certificate.jpg',
+    dataset: { caption: 'Certificate of Appreciation' },
+    closest: () => null,
+    addEventListener: on('link'),
+  };
+  const document = {
+    body: { style: {} },
+    querySelector: () => box,
+    querySelectorAll: () => [link],
+    addEventListener: (name, handler) => { if (name === 'DOMContentLoaded') handler(); },
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(root, 'lightbox.js'), 'utf8'), { document });
+
+  handlers['link:click']({ preventDefault() {} });
+  assert.equal(image.src, 'certificate.jpg');
+  assert.equal(caption.textContent, 'Certificate of Appreciation');
+  assert.equal(single, true);
 });

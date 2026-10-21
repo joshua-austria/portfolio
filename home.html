@@ -9,6 +9,7 @@
   <script src="theme.js?v=2"></script>
   <link rel="stylesheet" href="common.css?v=4">
   <link rel="stylesheet" href="index.css?v=7">
+  <link rel="stylesheet" href="lightbox.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -167,7 +168,7 @@
       <h2 id="recognition-title">Presentations &amp; Recognition</h2>
     </div>
     <article class="recognition-card">
-      <a class="recognition-preview" href="assets/certificates/littersense-shenzhen-presentation.jpg" target="_blank" rel="noopener noreferrer" aria-label="View LitterSense presentation Certificate of Appreciation, opens in a new tab">
+      <a class="recognition-preview" href="assets/certificates/littersense-shenzhen-presentation.jpg" data-lightbox aria-label="View LitterSense presentation Certificate of Appreciation">
         <img src="assets/certificates/littersense-shenzhen-presentation.jpg" alt="Certificate of Appreciation awarded to Joshua M. Austria for presenting LitterSense at Shenzhen City Polytechnic" width="3008" height="2359" loading="lazy">
       </a>
       <div class="recognition-details">
@@ -175,14 +176,25 @@
         <p>I represented our capstone team and presented LitterSense during the International Student Engagement and Exploration Program at Shenzhen City Polytechnic, China.</p>
         <p class="credential-date"><time datetime="2026-05-21">May 21, 2026</time></p>
         <p class="credential-issuer">Certificate of Appreciation &middot; St. Dominic College of Asia and Shenzhen City Polytechnic</p>
-        <a class="credential-link" href="assets/certificates/littersense-shenzhen-presentation.jpg" target="_blank" rel="noopener noreferrer">View Certificate <span class="file-label">JPG &#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        <a class="credential-link" href="assets/certificates/littersense-shenzhen-presentation.jpg" data-lightbox data-caption="Certificate of Appreciation awarded to Joshua M. Austria for presenting LitterSense at Shenzhen City Polytechnic">View Certificate <span class="file-label">JPG</span></a>
       </div>
     </article>
   </section>
   </main>
 
+  <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
+    <button class="lightbox-close" type="button" aria-label="Close image viewer"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button class="lightbox-prev" type="button" aria-label="Previous image"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <figure>
+      <img alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lightbox-next" type="button" aria-label="Next image"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+  </dialog>
+
   <script src="particles.js"></script>
   <script src="app.js?v=3"></script>
   <script src="hamburger.js?v=3"></script>
+  <script src="lightbox.js?v=2"></script>
 </body>
 </html>

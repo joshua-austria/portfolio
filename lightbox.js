@@ -8,18 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function show(next) {
     index = (next + links.length) % links.length;
-    const thumb = links[index].querySelector('img');
+    const text = links[index].dataset.caption ?? links[index].querySelector('img').alt;
     image.src = links[index].href;
-    image.alt = thumb.alt;
-    caption.textContent = thumb.alt;
+    image.alt = text;
+    caption.textContent = text;
     box.classList.toggle('lightbox-single', links.length < 2);
   }
 
   // Links keep their href so images still open without JavaScript.
-  document.querySelectorAll('.project-gallery a').forEach((link) => {
+  document.querySelectorAll('.project-gallery a, a[data-lightbox]').forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
-      links = [...link.closest('.project-media').querySelectorAll('.project-gallery a')];
+      const group = link.closest('.project-media');
+      links = group ? [...group.querySelectorAll('.project-gallery a')] : [link];
       show(links.indexOf(link));
       box.showModal();
       document.body.style.overflow = 'hidden';
