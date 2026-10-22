@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
 
-/* Lord of the Mysteries inspired: quiet parchment by day, charcoal and gray fog by night, gold used sparingly. */
+/* Lord of the Mysteries inspired: quiet parchment by day, still charcoal by night, gold used sparingly. */
 :root {
   color-scheme: light;
   --page-top: #f5efe3;
@@ -72,7 +72,7 @@ body {
   text-align: center;
   isolation: isolate;
 }
-/* Faint film grain over the fog, under the content. */
+/* Faint film grain over the background, under the content. */
 body::after {
   content: "";
   position: fixed;
@@ -188,10 +188,6 @@ header {
 .side-menu a { padding: 14px 16px; }
 @keyframes slide-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
 
-#particles-js { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
-/* A few tiny gold dust specks drifting slowly. */
-#particles-js canvas { display: block; }
-
 @media (max-width: 800px) {
   .desktop-nav { display: none; }
   .hamburger-menu { display: inline-flex; }
@@ -203,7 +199,6 @@ header {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  #particles-js { display: none; }
 }
 
 /* Cards: one thin border; a soft candle-gold glow on hover. */
