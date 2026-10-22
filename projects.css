@@ -76,3 +76,26 @@
   .project-gallery img { transition: none; }
   .project-gallery a:hover img { transform: none; }
 }
+
+.project-more { margin-bottom: 24px; }
+.project-more summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.project-more summary::-webkit-details-marker { display: none; }
+.project-more summary:hover { background: var(--surface-soft); }
+.project-more summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.project-more-hide,
+.project-more[open] .project-more-show { display: none; }
+.project-more[open] .project-more-hide { display: inline; }
+.project-more .project-gallery { margin: 16px 0 0; }
