@@ -1,35 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
 
+/* Lord of the Mysteries inspired: quiet parchment by day, charcoal and gray fog by night, gold used sparingly. */
 :root {
   color-scheme: light;
-  --page-top: #dff2ff;
-  --page-bottom: #f8fbff;
-  --surface: #ffffff;
-  --surface-soft: #edf4fc;
-  --text: #163354;
-  --muted: #526174;
-  --accent: #0056b3;
-  --accent-hover: #00458f;
-  --button: #0056b3;
-  --button-hover: #00458f;
-  --border: #dce7f3;
-  --shadow: 0 6px 20px rgba(22, 51, 84, 0.07);
+  --page-top: #f5efe3;
+  --page-mid: #f1e9da;
+  --page-bottom: #ece3d2;
+  --glow-cool: rgba(70, 110, 150, 0.04);
+  --glow-warm: rgba(176, 130, 50, 0.08);
+  --surface: #faf6ee;
+  --surface-soft: #f0e8d8;
+  --text: #221d16;
+  --muted: #5d5446;
+  --accent: #85590f;
+  --accent-hover: #664308;
+  --button: #c9a35a;
+  --button-hover: #b38c44;
+  --on-button: #1c1710;
+  --border: rgba(133, 89, 15, 0.18);
+  --frame: rgba(133, 89, 15, 0.45);
+  --ghost-bg: rgba(133, 89, 15, 0.06);
+  --ghost-border: rgba(133, 89, 15, 0.28);
+  --radius: 6px;
+  --crimson: #9b1c24;
+  --shadow: 0 6px 20px rgba(60, 40, 15, 0.06);
+  --glow: 0 0 28px rgba(176, 130, 50, 0.2);
+  --grain-opacity: 0.04;
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --page-top: #0c1626;
-  --page-bottom: #101827;
-  --surface: #172339;
-  --surface-soft: #203149;
-  --text: #e5edf8;
-  --muted: #b1bed1;
-  --accent: #8dc5ff;
-  --accent-hover: #c2dfff;
-  --button: #245c9c;
-  --button-hover: #1c4c84;
-  --border: #34455e;
-  --shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  --page-top: #0a0a0c;
+  --page-mid: #0f0f12;
+  --page-bottom: #0a0a0c;
+  --glow-cool: rgba(125, 211, 252, 0.035);
+  --glow-warm: rgba(194, 178, 128, 0.04);
+  --surface: #19191c;
+  --surface-soft: #222226;
+  --text: #e5e5e5;
+  --muted: #a8a49c;
+  --accent: #c2b280;
+  --accent-hover: #d8cba3;
+  --button: #c2b280;
+  --button-hover: #d3c497;
+  --on-button: #14120e;
+  --border: rgba(194, 178, 128, 0.15);
+  --frame: rgba(194, 178, 128, 0.45);
+  --ghost-bg: rgba(194, 178, 128, 0.065);
+  --ghost-border: rgba(194, 178, 128, 0.22);
+  --crimson: #d0545d;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  --glow: 0 0 28px rgba(212, 175, 106, 0.14);
+  --grain-opacity: 0.025;
 }
 
 * { box-sizing: border-box; }
@@ -38,15 +60,30 @@ body {
   margin: 0;
   padding-top: 80px;
   min-height: 100vh;
-  background: linear-gradient(var(--page-top), var(--page-bottom));
+  /* Still background: dark gradient with two faint glows, cool in the middle and warm top right. */
+  background:
+    radial-gradient(80% 50% at 50% 50%, var(--glow-cool), transparent 70%),
+    radial-gradient(70% 60% at 70% 30%, var(--glow-warm), transparent 60%),
+    linear-gradient(var(--page-top), var(--page-mid), var(--page-bottom));
+  background-attachment: fixed;
   color: var(--text);
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
   text-align: center;
   isolation: isolate;
 }
+/* Faint film grain over the fog, under the content. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 h1, h2, h3, p { margin: 0; }
-h1, h2, h3 { line-height: 1.3; }
+h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 400; line-height: 1.25; }
 a { color: var(--accent); }
 button, input, textarea { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -83,7 +120,8 @@ header {
 }
 .header-title {
   color: var(--text);
-  font-size: 1.3rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
   font-weight: 700;
   text-decoration: none;
   white-space: nowrap;
@@ -100,13 +138,16 @@ header {
   padding: 10px 14px;
   border-radius: 8px;
   color: var(--muted);
+  font-size: 0.8rem;
   font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-.nav-link:hover { background: var(--surface-soft); color: var(--accent); }
-.nav-link.active { background: var(--button); color: #fff; }
+.nav-link:hover { color: var(--accent); }
+.nav-link.active { color: var(--accent); box-shadow: inset 0 -1px 0 var(--frame); border-radius: 0; }
 .header-actions { display: flex; align-items: center; gap: 8px; }
 .theme-toggle, .hamburger-menu, .close-btn {
   display: inline-flex;
@@ -148,6 +189,7 @@ header {
 @keyframes slide-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
 
 #particles-js { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+/* A few tiny gold dust specks drifting slowly. */
 #particles-js canvas { display: block; }
 
 @media (max-width: 800px) {
@@ -163,3 +205,24 @@ header {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   #particles-js { display: none; }
 }
+
+/* Cards: one thin border; a soft candle-gold glow on hover. */
+.project-card,
+.certification-card,
+.recognition-card { transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.project-card:hover,
+.certification-card:hover,
+.recognition-card:hover { border-color: var(--frame); box-shadow: var(--shadow), var(--glow); }
+
+/* Thin gold rule that fades out at both ends. */
+.section-heading :is(h1, h2)::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 1px;
+  margin: 18px auto 0;
+  background: linear-gradient(to right, transparent, var(--frame), transparent);
+}
+
+/* Hairline rule between stacked sections. */
+.portfolio-section + .portfolio-section { border-top: 1px solid var(--border); padding-top: 64px; }

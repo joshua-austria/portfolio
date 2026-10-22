@@ -39,7 +39,7 @@
   cursor: pointer;
 }
 .lightbox button:hover { background: rgba(255, 255, 255, 0.24); }
-.lightbox button:focus-visible { outline: 3px solid #8dc5ff; outline-offset: 2px; }
+.lightbox button:focus-visible { outline: 3px solid #d4af6a; outline-offset: 2px; }
 .lightbox-close { top: 16px; right: 16px; }
 .lightbox-prev { top: 50%; left: 12px; transform: translateY(-50%); }
 .lightbox-next { top: 50%; right: 12px; transform: translateY(-50%); }

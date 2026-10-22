@@ -2,7 +2,7 @@
   margin-bottom: 12px;
   color: var(--text);
   font-size: clamp(1.65rem, 3vw, 2.1rem);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.25;
 }
 
@@ -20,13 +20,13 @@
   width: 100%;
   min-height: 160px;
   margin-bottom: 20px;
-  border-radius: 12px;
+  border-radius: var(--radius);
 }
 .project-feature h2 {
   margin-bottom: 12px;
   color: var(--text);
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.4;
 }
 .project-link-follow { margin-top: 0; }
@@ -83,17 +83,17 @@
   align-items: center;
   min-height: 44px;
   padding: 10px 18px;
-  border: 2px solid var(--accent);
-  border-radius: 10px;
-  background: var(--surface);
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-weight: 700;
+  border: 1px solid var(--ghost-border);
+  border-radius: 4px;
+  background: var(--ghost-bg);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-weight: 500;
   cursor: pointer;
   list-style: none;
 }
 .project-more summary::-webkit-details-marker { display: none; }
-.project-more summary:hover { background: var(--surface-soft); }
+.project-more summary:hover { border-color: var(--frame); }
 .project-more summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .project-more-hide,
 .project-more[open] .project-more-show { display: none; }

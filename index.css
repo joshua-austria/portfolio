@@ -22,7 +22,7 @@
 
 .head1 {
 	font-size: 2.5rem;
-	font-weight: bold;
+	font-weight: 600;
   line-height: 1.2;
 }
 
@@ -34,14 +34,14 @@
 }
 
 .highlight {
-	color: var(--accent);
+	color: var(--text);
 }
 
 .profile-pic {
 	width: 300px;
   flex-shrink: 0;
 	border-radius: 100%;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 0 6px var(--surface), 0 0 0 8px var(--frame), 0 0 32px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }  
 
@@ -128,11 +128,11 @@
   justify-content: center;
   min-height: 48px;
   padding: 12px 20px;
-  border: 2px solid var(--accent);
-  border-radius: 10px;
+  border: 1px solid var(--button);
+  border-radius: 4px;
   background: var(--button);
-  color: #fff;
-  font-weight: 700;
+  color: var(--on-button);
+  font-weight: 600;
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
@@ -142,12 +142,15 @@
 }
 
 .portfolio-button-secondary {
-  background: var(--surface);
-  color: var(--accent);
+  border-color: var(--ghost-border);
+  background: var(--ghost-bg);
+  color: var(--text);
+  font-weight: 500;
 }
 
 .portfolio-button-secondary:hover {
-  background: var(--surface-soft);
+  border-color: var(--frame);
+  background: var(--ghost-bg);
 }
 
 .portfolio-section {
@@ -165,9 +168,9 @@
 .section-eyebrow {
   margin-bottom: 8px;
   color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
@@ -175,7 +178,7 @@
   margin-bottom: 12px;
   color: var(--text);
   font-size: clamp(1.65rem, 3vw, 2.1rem);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.25;
 }
 
@@ -198,7 +201,7 @@
 .certification-card {
   overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
 }
@@ -257,7 +260,7 @@
   margin-bottom: 12px;
   color: var(--text);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.45;
 }
 
@@ -287,7 +290,7 @@
   gap: 28px;
   padding: 28px;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius);
   background: var(--surface);
   text-align: left;
 }

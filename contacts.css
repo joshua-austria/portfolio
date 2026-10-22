@@ -15,7 +15,7 @@ form {
   margin: 28px auto;
   padding: clamp(20px, 5vw, 32px);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
   text-align: left;
@@ -36,8 +36,8 @@ input.submit-button {
   min-height: 48px;
   border-color: var(--button);
   background: var(--button);
-  color: #fff;
-  font-weight: 700;
+  color: var(--on-button);
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease;
 }

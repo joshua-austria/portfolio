@@ -6,7 +6,7 @@
 #about {
   padding: clamp(24px, 5vw, 40px);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius);
   background: var(--surface);
   box-shadow: var(--shadow);
 }
