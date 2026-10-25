@@ -74,9 +74,11 @@ body {
   text-align: center;
   isolation: isolate;
 }
-/* Still stars: two tiles of tiny dots at different sizes, so the pattern does not visibly repeat. */
+/* Still stars for visitors who prefer reduced motion (everyone else gets the drifting particles.js stars).
+   Two tiles of tiny dots at different sizes, so the pattern does not visibly repeat. */
 body::before {
   content: "";
+  display: none;
   position: fixed;
   inset: 0;
   z-index: -1;
@@ -96,6 +98,10 @@ body::before {
     517px 517px, 517px 517px, 517px 517px, 517px 517px;
   opacity: 0.6;
 }
+/* Slowly drifting stars drawn by particles.js; recolored dark teal on the light theme. */
+#particles-js { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+#particles-js canvas { display: block; }
+:root:not([data-theme="dark"]) #particles-js canvas { filter: invert(1) hue-rotate(180deg); opacity: 0.6; }
 /* Faint film grain over the background, under the content. */
 body::after {
   content: "";
@@ -223,6 +229,8 @@ header {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  #particles-js { display: none; }
+  body::before { display: block; }
 }
 
 /* Cards: one thin border; a soft candle-gold glow on hover. */

@@ -85,6 +85,22 @@ test('a later system change follows the OS until the user chooses a theme', () =
   assert.equal(site.document.documentElement.dataset.theme, 'light');
 });
 
+test('the background does not crash when the particle library is unavailable', () => {
+  assert.doesNotThrow(() => vm.runInNewContext(
+    fs.readFileSync(path.join(root, 'app.js'), 'utf8'),
+    { window: { matchMedia: () => ({ matches: false }) } },
+  ));
+});
+
+test('reduced motion prevents the animated background from starting', () => {
+  let starts = 0;
+  vm.runInNewContext(fs.readFileSync(path.join(root, 'app.js'), 'utf8'), {
+    window: { matchMedia: () => ({ matches: true }) },
+    particlesJS: { load: () => { starts++; } },
+  });
+  assert.equal(starts, 0);
+});
+
 test('Escape restores page scrolling without waiting for the queued dialog close event', () => {
   const triggerEvents = {};
   const menuEvents = {};
