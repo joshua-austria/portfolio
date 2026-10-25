@@ -8,7 +8,6 @@
   --page-bottom: #dde8f0;
   --haze-a: rgba(70, 170, 200, 0.10);
   --haze-b: rgba(110, 140, 230, 0.08);
-  --star: rgba(20, 70, 100, 0.35);
   --surface: #f7fafc;
   --surface-soft: #e9f1f6;
   --text: #0f2230;
@@ -98,10 +97,12 @@ body::before {
     517px 517px, 517px 517px, 517px 517px, 517px 517px;
   opacity: 0.6;
 }
-/* Slowly drifting stars drawn by particles.js; recolored dark teal on the light theme. */
+/* Slowly drifting stars drawn by particles.js; stars belong to the night sky, so the light theme has none. */
 #particles-js { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
 #particles-js canvas { display: block; }
-:root:not([data-theme="dark"]) #particles-js canvas { filter: invert(1) hue-rotate(180deg); opacity: 0.6; }
+/* visibility, not display: a hidden canvas would start at 0x0 and stay empty after switching to dark. */
+:root:not([data-theme="dark"]) #particles-js { visibility: hidden; }
+:root:not([data-theme="dark"]) body::before { display: none; }
 /* Faint film grain over the background, under the content. */
 body::after {
   content: "";
