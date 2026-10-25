@@ -99,3 +99,4 @@
 .project-more[open] .project-more-show { display: none; }
 .project-more[open] .project-more-hide { display: inline; }
 .project-more .project-gallery { margin: 16px 0 0; }
+.project-details > p + p:not(.project-contribution) { margin-top: 12px; }

@@ -9,7 +9,7 @@
   <script src="theme.js?v=2"></script>
   <link rel="stylesheet" href="common.css?v=9">
   <link rel="stylesheet" href="index.css?v=10">
-  <link rel="stylesheet" href="projects.css?v=4">
+  <link rel="stylesheet" href="projects.css?v=5">
   <link rel="stylesheet" href="lightbox.css?v=2">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -65,10 +65,11 @@
           <span class="project-type">Capstone project</span>
         </div>
         <h2 id="littersense-title">LitterSense Web App</h2>
-        <p>An IoT-connected web app for monitoring cats' litter box activity. Our capstone brings together cat profiles, visit tracking, sensor readings, and health reports in one dashboard.</p>
+        <p>LitterSense is an IoT smart litter box that helps cat owners catch health problems early. Changes in how often or how long a cat uses the litter box can be the first sign of urinary disease, kidney disease, or diabetes, and cats tend to hide when they are sick.</p>
+        <p>An ESP32 device reads RFID collar tags to tell cats apart, confirms each visit with an ultrasonic sensor, and uses gas sensors to tell owners when the litter needs changing. It keeps recording during internet outages and syncs to Firebase once the connection returns. The web app shows each cat's visit history and trends, sends alerts when visits look unusual, streams a live camera view, and exports PDF and CSV reports for vet visits. It flags changes but does not diagnose.</p>
         <p class="project-contribution"><strong>My contribution:</strong> I focused on frontend development, added features, and fixed bugs and errors. I also contributed to backend work, including migrating data to Supabase, and represented our team in an <a href="home.html#recognition">international research presentation</a>.</p>
         <ul class="project-tags" aria-label="LitterSense technologies">
-          <li>Next.js</li><li>React</li><li>Firebase</li><li>Supabase</li><li>IoT</li>
+          <li>Next.js</li><li>React</li><li>Firebase</li><li>Supabase</li><li>ESP32</li><li>IoT</li>
         </ul>
         <a class="project-link" href="https://litter-sense-csp-web-app.vercel.app" target="_blank" rel="noopener noreferrer">Open live web app <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
         <a class="project-link project-link-follow" href="https://github.com/John-Orlie-Mascardo/LitterSense-CSP-WebApp" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
