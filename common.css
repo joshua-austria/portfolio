@@ -1,57 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
 
-/* Lord of the Mysteries inspired: quiet parchment by day, still charcoal by night, gold used sparingly. */
+/* Lord of the Mysteries, Door pathway inspired: a still night sky with ice-blue starlight by night, misty silver-blue by day. */
 :root {
   color-scheme: light;
-  --page-top: #f5efe3;
-  --page-mid: #f1e9da;
-  --page-bottom: #ece3d2;
-  --glow-cool: rgba(70, 110, 150, 0.04);
-  --glow-warm: rgba(176, 130, 50, 0.08);
-  --surface: #faf6ee;
-  --surface-soft: #f0e8d8;
-  --text: #221d16;
-  --muted: #5d5446;
-  --accent: #85590f;
-  --accent-hover: #664308;
-  --button: #c9a35a;
-  --button-hover: #b38c44;
-  --on-button: #1c1710;
-  --border: rgba(133, 89, 15, 0.18);
-  --frame: rgba(133, 89, 15, 0.45);
-  --ghost-bg: rgba(133, 89, 15, 0.06);
-  --ghost-border: rgba(133, 89, 15, 0.28);
+  --page-top: #eef4f8;
+  --page-mid: #e7eff5;
+  --page-bottom: #dde8f0;
+  --haze-a: rgba(70, 170, 200, 0.10);
+  --haze-b: rgba(110, 140, 230, 0.08);
+  --star: rgba(20, 70, 100, 0.35);
+  --surface: #f7fafc;
+  --surface-soft: #e9f1f6;
+  --text: #0f2230;
+  --muted: #4a5f6e;
+  --accent: #0e6b7c;
+  --accent-hover: #0a5361;
+  --button: #0e6b7c;
+  --button-hover: #0a5361;
+  --on-button: #ffffff;
+  --border: rgba(14, 107, 124, 0.18);
+  --frame: rgba(14, 107, 124, 0.45);
+  --ghost-bg: rgba(14, 107, 124, 0.06);
+  --ghost-border: rgba(14, 107, 124, 0.3);
   --radius: 6px;
   --crimson: #9b1c24;
-  --shadow: 0 6px 20px rgba(60, 40, 15, 0.06);
-  --glow: 0 0 28px rgba(176, 130, 50, 0.2);
-  --grain-opacity: 0.04;
+  --shadow: 0 6px 20px rgba(15, 50, 70, 0.07);
+  --glow: 0 0 28px rgba(14, 107, 124, 0.18);
+  --grain-opacity: 0.03;
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --page-top: #0a0a0c;
-  --page-mid: #0f0f12;
-  --page-bottom: #0a0a0c;
-  --glow-cool: rgba(125, 211, 252, 0.035);
-  --glow-warm: rgba(194, 178, 128, 0.04);
-  --surface: #19191c;
-  --surface-soft: #222226;
-  --text: #e5e5e5;
-  --muted: #a8a49c;
-  --accent: #c2b280;
-  --accent-hover: #d8cba3;
-  --button: #c2b280;
-  --button-hover: #d3c497;
-  --on-button: #14120e;
-  --border: rgba(194, 178, 128, 0.15);
-  --frame: rgba(194, 178, 128, 0.45);
-  --ghost-bg: rgba(194, 178, 128, 0.065);
-  --ghost-border: rgba(194, 178, 128, 0.22);
+  --page-top: #040a12;
+  --page-mid: #08172a;
+  --page-bottom: #040a12;
+  --haze-a: rgba(60, 190, 215, 0.09);
+  --haze-b: rgba(80, 120, 230, 0.07);
+  --star: rgba(210, 240, 255, 0.75);
+  --surface: #0b1623;
+  --surface-soft: #11202f;
+  --text: #e3eef5;
+  --muted: #9db1c0;
+  --accent: #7fe0ee;
+  --accent-hover: #b5f1f8;
+  --button: #7fe0ee;
+  --button-hover: #a8eef6;
+  --on-button: #04121c;
+  --border: rgba(127, 224, 238, 0.15);
+  --frame: rgba(127, 224, 238, 0.45);
+  --ghost-bg: rgba(127, 224, 238, 0.06);
+  --ghost-border: rgba(127, 224, 238, 0.25);
   --crimson: #d0545d;
-  --shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  --glow: 0 0 28px rgba(212, 175, 106, 0.14);
-  --grain-opacity: 0.025;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  --glow: 0 0 28px rgba(127, 224, 238, 0.18);
+  --grain-opacity: 0.02;
 }
 
 * { box-sizing: border-box; }
@@ -60,10 +62,10 @@ body {
   margin: 0;
   padding-top: 80px;
   min-height: 100vh;
-  /* Still background: dark gradient with two faint glows, cool in the middle and warm top right. */
+  /* Still background: night-sky gradient with two faint nebula hazes. */
   background:
-    radial-gradient(80% 50% at 50% 50%, var(--glow-cool), transparent 70%),
-    radial-gradient(70% 60% at 70% 30%, var(--glow-warm), transparent 60%),
+    radial-gradient(70% 55% at 50% 40%, var(--haze-a), transparent 70%),
+    radial-gradient(60% 50% at 80% 20%, var(--haze-b), transparent 65%),
     linear-gradient(var(--page-top), var(--page-mid), var(--page-bottom));
   background-attachment: fixed;
   color: var(--text);
@@ -71,6 +73,28 @@ body {
   line-height: 1.6;
   text-align: center;
   isolation: isolate;
+}
+/* Still stars: two tiles of tiny dots at different sizes, so the pattern does not visibly repeat. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 23px 41px, var(--star), transparent),
+    radial-gradient(1px 1px at 157px 112px, var(--star), transparent),
+    radial-gradient(1.5px 1.5px at 271px 203px, var(--star), transparent),
+    radial-gradient(1px 1px at 88px 262px, var(--star), transparent),
+    radial-gradient(1px 1px at 214px 18px, var(--star), transparent),
+    radial-gradient(1px 1px at 61px 167px, var(--star), transparent),
+    radial-gradient(1.5px 1.5px at 389px 77px, var(--star), transparent),
+    radial-gradient(1px 1px at 452px 318px, var(--star), transparent),
+    radial-gradient(1px 1px at 333px 451px, var(--star), transparent),
+    radial-gradient(2px 2px at 119px 389px, var(--star), transparent);
+  background-size: 313px 313px, 313px 313px, 313px 313px, 313px 313px, 313px 313px, 313px 313px,
+    517px 517px, 517px 517px, 517px 517px, 517px 517px;
+  opacity: 0.6;
 }
 /* Faint film grain over the background, under the content. */
 body::after {
