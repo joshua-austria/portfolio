@@ -1,47 +1,32 @@
-.skills-page {
-  width: min(1000px, 90%);
-  margin: 48px auto 64px;
-}
-
-.skills-heading {
-  max-width: 640px;
-  margin: 0 auto 32px;
-}
-
-.skills-heading h1 {
-  margin-bottom: 12px;
-  color: var(--accent);
-  font-size: clamp(1.7rem, 3vw, 2.2rem);
-  font-weight: 400;
-  line-height: 1.25;
-}
-
-.skills-heading p {
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.skill-group {
-  margin-top: 20px;
-  padding: 24px;
+.skills-groups {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
+}
+
+.skill-group {
+  display: grid;
+  grid-template-columns: minmax(0, 12rem) minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  padding: clamp(14px, 2.4vw, 24px);
   text-align: left;
 }
 
-.skill-group h2 {
-  margin-bottom: 18px;
+.skill-group + .skill-group {
+  border-top: 1px solid var(--border);
+}
+
+.skill-group h3 {
+  align-self: center;
   color: var(--text);
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.4;
+  font-size: 1.15rem;
 }
 
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -49,55 +34,52 @@
 
 .skill-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-width: 0;
-  min-height: 132px;
-  padding: 14px 8px;
+  gap: 8px;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 7px 10px;
   border: 1px solid var(--border);
-  border-radius: 9px;
+  border-radius: var(--radius);
   background: var(--surface-soft);
   color: var(--text);
   font-size: 0.85rem;
   font-weight: 600;
-  line-height: 1.4;
-  text-align: center;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
 }
 
 .skill-item img {
-  width: 64px;
-  height: 64px;
-  padding: 4px;
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  padding: 1.5px;
   object-fit: contain;
 }
 
-/* Logos made for white backgrounds turn into white silhouettes in dark mode; Vercel's white logo turns black in light mode. */
+/* Keep monochrome marks visible against both surfaces. */
 :root:not([data-theme="dark"]) .skill-item img.skill-icon-light { filter: invert(1); }
 :root[data-theme="dark"] .skill-item img.skill-icon-mono { filter: brightness(0) invert(1); }
 
 /* Balance the Python asset's transparent right margin and lower shadow. */
-.skill-item img.skill-icon-python { padding: 8px 1.5px 0 6.5px; }
+.skill-item img.skill-icon-python { padding: 3.25px 0.6px 0 2.65px; }
 
-/* Responsive spacing; the skill grid wraps to the available width. */
-@media (max-width: 768px) {
-.skills-page {
-    margin-top: 24px;
+@media (max-width: 760px) {
+  .skill-group {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .skill-group {
-    padding: 18px 16px;
-  }
-
-  .skill-group h2 {
-    font-size: 1.1rem;
-  }
-
   .skills-list {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    align-items: stretch;
+  }
+
+  .skill-item {
+    min-width: 0;
+    padding-inline: 8px;
   }
 }

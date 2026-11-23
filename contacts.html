@@ -1,99 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-home-section="contact" data-home-anchors="name email message">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joshua Austria | Contact</title>
-  <meta name="description" content="Get in touch with Joshua Austria about projects and opportunities, or connect on GitHub and LinkedIn.">
-  <meta name="color-scheme" content="light dark">
-  <script src="theme.js?v=2"></script>
-  <link rel="stylesheet" href="common.css?v=14">
-  <link rel="stylesheet" href="contacts.css?v=5">
+  <script src="home-redirect.js?v=2"></script>
+  <noscript><meta http-equiv="refresh" content="0; url=home.html#contact"></noscript>
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <div id="particles-js" aria-hidden="true"></div>
-  <header>
-    <div class="header-inner">
-      <a class="header-title" href="home.html">Joshua Austria</a>
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <ul class="nav-menu">
-          <li><a href="home.html" class="nav-link"><span>Home</span></a></li>
-          <li><a href="about.html" class="nav-link"><span>About</span></a></li>
-          <li><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
-          <li><a href="techstack.html" class="nav-link"><span>Skills &amp; Tools</span></a></li>
-          <li><a href="contacts.html" class="nav-link active" aria-current="page"><span>Contact</span></a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span aria-hidden="true">&#9789;</span></button>
-        <button class="hamburger-menu" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
-        </button>
-      </div>
-    </div>
-  </header>
-  <dialog id="mobile-menu" class="side-panel" aria-label="Main navigation">
-    <button class="close-btn" type="button" aria-label="Close navigation" autofocus><span aria-hidden="true">&times;</span></button>
-    <nav aria-label="Mobile navigation">
-      <ul class="side-menu">
-        <li><a href="home.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="techstack.html" class="nav-link">Skills &amp; Tools</a></li>
-        <li><a href="contacts.html" class="nav-link active" aria-current="page">Contact</a></li>
-      </ul>
-    </nav>
-  </dialog>
-
-  <main id="main-content" tabindex="-1" class="contact-page">
-  <h1 id="contact">Contact</h1>
-  <p>If you have any questions or would like to get in touch, please fill out the form below:</p>
-
-  <div class="container">
-    <form action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="b94412a2-6352-4ed4-b580-a9b6371b05d3">
-      <!-- Name Field -->
-      <div class="form-group">
-        <label for="name" >Name</label>
-        <input type="text" id="name" name="Name" autocomplete="name" required placeholder="Enter your name" >
-      </div>
-      <!-- Email Field -->
-      <div class="form-group">
-        <label for="email" >Email</label>
-        <input type="email" id="email" name="Email" autocomplete="email" required placeholder="Enter your email" >
-      </div>
-      <!-- Message Field -->
-      <div class="form-group">
-        <label for="message" >Message</label>
-        <textarea id="message" name="Message" placeholder="Enter your message"  rows="7" required></textarea>
-      </div>
-      <!-- Submit Button -->
-      <input type="submit" value="Submit" class="submit-button">
-    </form>
-  </div>
-
-  <h2 class="header2">Social Media</h2>
-  <p>Connect with me on social media:</p>
-
-  <div class="social-media-icons">
-    <a href="https://github.com/joshua-austria" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-      <svg class="social-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.558 21.923c.563.104.768-.244.768-.542 0-.267-.01-.975-.015-1.913-3.13.68-3.79-1.508-3.79-1.508-.512-1.3-1.25-1.647-1.25-1.647-1.023-.7.078-.686.078-.686 1.13.079 1.725 1.16 1.725 1.16 1.005 1.723 2.638 1.225 3.28.937.102-.729.393-1.225.714-1.507-2.499-.284-5.126-1.25-5.126-5.566 0-1.23.44-2.234 1.16-3.022-.117-.285-.503-1.429.11-2.979 0 0 .945-.303 3.095 1.155a10.79 10.79 0 0 1 5.634 0c2.148-1.458 3.092-1.155 3.092-1.155.615 1.55.229 2.694.113 2.979.721.788 1.158 1.792 1.158 3.022 0 4.327-2.631 5.279-5.138 5.557.404.35.764 1.042.764 2.1 0 1.516-.014 2.739-.014 3.111 0 .3.202.652.774.542A11.252 11.252 0 0 0 12 .75Z"/></svg>
-      GitHub <span aria-hidden="true">&#8599;</span>
-    </a>
-    <a href="https://www.linkedin.com/in/joshua-austria-212a6a35b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-      <svg class="social-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM7.119 20.452H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/></svg>
-      LinkedIn <span aria-hidden="true">&#8599;</span>
-    </a>
-  </div>
-
-  </main>
-
-  <script src="particles.js"></script>
-  <script src="app.js?v=6"></script>
-  <script src="hamburger.js?v=3"></script>
+  <p><a href="home.html#contact">Continue to Contact</a></p>
 </body>
 </html>

@@ -1,34 +1,44 @@
-.projects-page-title {
-  margin-bottom: 12px;
-  color: var(--text);
-  font-size: clamp(1.65rem, 3vw, 2.1rem);
-  font-weight: 400;
-  line-height: 1.25;
+.project-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
 }
 
 .project-feature {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  gap: 32px;
-  margin-bottom: 32px;
-  padding: 28px;
-  scroll-margin-top: 100px;
+  gap: 24px;
+  padding: clamp(16px, 3vw, 28px);
 }
 
-.project-feature .project-details { padding: 0; }
+.project-featured {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(24px, 4vw, 48px);
+}
+
 .project-feature .project-visual {
+  flex-direction: row;
+  justify-content: flex-start;
   width: 100%;
-  min-height: 160px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
   border-radius: var(--radius);
 }
-.project-feature h2 {
+
+.project-feature .project-visual img { width: 62px; height: 42px; }
+
+.project-feature h3 {
   margin-bottom: 12px;
-  color: var(--text);
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.4;
+  font-size: clamp(1.38rem, 2.6vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.3;
 }
+
+@media (max-width: 780px) {
+  .project-showcase, .project-featured { grid-template-columns: minmax(0, 1fr); }
+}
+
 .project-link-follow { margin-top: 0; }
 .project-gallery-label {
   margin-bottom: 10px;
@@ -51,7 +61,6 @@
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3;
   object-fit: cover;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -60,24 +69,20 @@
 .project-gallery-wide img { aspect-ratio: 16 / 10; object-position: top; }
 /* Simple phone frame so raw mobile screenshots read as app screens. */
 .project-gallery-tall { max-width: 520px; }
+.project-gallery:last-child { margin-bottom: 0; }
 .project-gallery-tall img {
-  aspect-ratio: auto;
-  border: 6px solid #111;
-  border-radius: 22px;
+  border: clamp(3px, 0.45vw, 6px) solid #111;
+  border-radius: clamp(9px, 1.6vw, 18px);
 }
 .project-gallery a:hover img { transform: translateY(-3px); }
 .project-gallery a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-
-@media (max-width: 800px) {
-  .project-feature { grid-template-columns: 1fr; padding: 20px; }
-}
 
 @media (prefers-reduced-motion: reduce) {
   .project-gallery img { transition: none; }
   .project-gallery a:hover img { transform: none; }
 }
 
-.project-more { margin-bottom: 24px; }
+.project-more { margin-bottom: 0; }
 .project-more summary {
   display: inline-flex;
   align-items: center;

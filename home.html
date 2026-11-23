@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joshua Austria | Home</title>
-  <meta name="description" content="Joshua Austria's portfolio: LitterSense, Csoles Connect, Bytes Cookbook, and certifications in web development, Microsoft Office, Cisco Packet Tracer, and IoT.">
+  <title>Joshua Austria | Portfolio</title>
+  <meta name="description" content="Joshua Austria is a fourth-year IT student exploring AI-assisted web development and software testing. Explore his projects, skills, and certifications.">
   <meta name="color-scheme" content="light dark">
   <script src="theme.js?v=2"></script>
-  <link rel="stylesheet" href="common.css?v=14">
-  <link rel="stylesheet" href="index.css?v=10">
+  <link rel="stylesheet" href="common.css?v=15">
+  <link rel="stylesheet" href="index.css?v=13">
+  <link rel="stylesheet" href="projects.css?v=6">
+  <link rel="stylesheet" href="techstack.css?v=7">
+  <link rel="stylesheet" href="contacts.css?v=6">
   <link rel="stylesheet" href="lightbox.css?v=3">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -19,14 +22,14 @@
   <div id="particles-js" aria-hidden="true"></div>
   <header>
     <div class="header-inner">
-      <a class="header-title" href="home.html">Joshua Austria</a>
+      <a class="header-title" href="#home">Joshua Austria</a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <ul class="nav-menu">
-          <li><a href="home.html" class="nav-link active" aria-current="page"><span>Home</span></a></li>
-          <li><a href="about.html" class="nav-link"><span>About</span></a></li>
-          <li><a href="projects.html" class="nav-link"><span>Projects</span></a></li>
-          <li><a href="techstack.html" class="nav-link"><span>Skills &amp; Tools</span></a></li>
-          <li><a href="contacts.html" class="nav-link"><span>Contact</span></a></li>
+          <li><a href="#home" class="nav-link active" aria-current="location"><span>Home</span></a></li>
+          <li><a href="#about" class="nav-link"><span>About</span></a></li>
+          <li><a href="#projects" class="nav-link"><span>Projects</span></a></li>
+          <li><a href="#skills" class="nav-link"><span>Skills &amp; Tools</span></a></li>
+          <li><a href="#contact" class="nav-link"><span>Contact</span></a></li>
         </ul>
       </nav>
       <div class="header-actions">
@@ -41,89 +44,288 @@
     <button class="close-btn" type="button" aria-label="Close navigation" autofocus><span aria-hidden="true">&times;</span></button>
     <nav aria-label="Mobile navigation">
       <ul class="side-menu">
-        <li><a href="home.html" class="nav-link active" aria-current="page">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="projects.html" class="nav-link">Projects</a></li>
-        <li><a href="techstack.html" class="nav-link">Skills &amp; Tools</a></li>
-        <li><a href="contacts.html" class="nav-link">Contact</a></li>
+        <li><a href="#home" class="nav-link active" aria-current="location">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills &amp; Tools</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
   </dialog>
 
   <main id="main-content" tabindex="-1">
-  <section id="home" aria-labelledby="home-title">
+  <section id="home" aria-labelledby="home-title" tabindex="-1">
     <div class="home-content">
-      <h1 id="home-title" class="head1">Hi, I am <span class="highlight">Joshua Austria</span></h1>
-      <h2 class="head2">Aspiring Web Developer</h2>
-      <p>A passionate IT student exploring web development and AI-assisted workflows.</p>
+      <h1 id="home-title" class="head1"><span class="hero-greeting">Hi, I am</span> Joshua Austria</h1>
+      <p class="head2">Aspiring <span>Web Developer</span> <span class="ampersand">&amp;</span> <span>QA Tester</span></p>
+      <p class="hero-intro">A curious IT student exploring AI-assisted web development who enjoys testing features, finding bugs, and retesting after a fix.</p>
       <div class="hero-actions">
         <a class="portfolio-button" href="#projects">View My Projects</a>
         <a class="portfolio-button portfolio-button-secondary" href="#certifications">Certifications &amp; Badges</a>
       </div>
       <a class="hero-recognition-link" href="#recognition">Presentations &amp; Recognition <span aria-hidden="true">&#8595;</span></a>
     </div>
-    <img src="images/Portprofile.jpg" alt="Joshua Austria" class="profile-pic">
+    <img src="images/Portprofile.jpg" alt="Joshua Austria" width="1229" height="1229" class="profile-pic">
   </section>
 
-  <section id="projects" class="portfolio-section" aria-labelledby="projects-title">
-    <div class="section-heading">
-      <p class="section-eyebrow">Putting learning into practice</p>
-      <h2 id="projects-title">Selected Projects</h2>
-      <p>Team projects and coursework across web development, mobile apps, and IoT.</p>
+  <section id="about" class="portfolio-section" aria-labelledby="about-title" tabindex="-1">
+    <div class="section-heading about-intro">
+      <h2 id="about-title">About Me</h2>
+      <p>I'm a fourth-year Information Technology student. I enjoy building web interfaces and checking how they behave when people use them.</p>
+      <p>I'm also interested in how AI can improve the way developers work. I use AI tools to work more efficiently when planning features, making code changes, and tracking down bugs. I review and test the changes myself so I understand what I'm building.</p>
+      <p>I'm currently exploring software testing in more depth, and I'm interested in building AI-powered features for the web.</p>
     </div>
-    <div class="projects-grid">
-      <article class="project-card">
-        <div class="project-visual project-visual-littersense">
-          <img src="images/projects/littersense-logo.svg" alt="LitterSense logo" width="112" height="112" loading="lazy">
-          <span class="project-type">Capstone project</span>
-        </div>
+  </section>
+
+  <section id="projects" class="portfolio-section" aria-labelledby="projects-title" tabindex="-1">
+    <div class="section-heading">
+      <h2 id="projects-title">Selected Projects</h2>
+      <p>Team projects across web development, mobile apps, and IoT. Select a screenshot to open the full-size gallery.</p>
+    </div>
+    <div class="project-showcase">
+      <article tabindex="-1" id="littersense" class="project-card project-feature project-featured" aria-labelledby="littersense-title">
         <div class="project-details">
-          <h3>LitterSense Web App</h3>
-          <p>A smart litter box system that helps cat owners spot health problems early. Sensors and RFID collar tags track each cat's visits, flag unusual patterns, and turn them into reports owners can bring to the vet.</p>
+          <div class="project-visual project-visual-littersense">
+            <img src="images/projects/littersense-logo.svg" alt="LitterSense logo" width="112" height="112" loading="lazy">
+            <span class="project-type">Capstone project</span>
+          </div>
+          <h3 id="littersense-title">LitterSense Web App</h3>
+          <p>LitterSense is an IoT smart litter box that helps cat owners catch health problems early. Changes in how often or how long a cat uses the litter box can be the first sign of urinary disease, kidney disease, or diabetes, and cats tend to hide when they are sick.</p>
+          <p>An ESP32 device reads RFID collar tags to tell cats apart, confirms each visit with an ultrasonic sensor, and uses gas sensors to tell owners when the litter needs changing. It keeps recording during internet outages and syncs once the connection returns. The web app shows each cat's visit history and trends, sends alerts when visits look unusual, streams a live camera view, and exports PDF and CSV reports for vet visits. It flags changes but does not diagnose.</p>
+          <p class="project-contribution"><strong>My contribution:</strong> I focused on frontend development, added features, and fixed bugs and errors. I also contributed to backend work, including migrating data to Supabase, and represented our team in an <a href="#recognition">international research presentation</a>.</p>
+          <p>I also tested RFID visit recording and checked whether visits made while offline appeared in the app after the device reconnected. I helped investigate when the results differed from what we expected.</p>
           <ul class="project-tags" aria-label="LitterSense technologies">
             <li>Next.js</li><li>React</li><li>Firebase</li><li>Supabase</li><li>ESP32</li><li>IoT</li>
           </ul>
-          <a class="project-link" href="projects.html#littersense">See screenshots &amp; details <span aria-hidden="true">&#8594;</span><span class="visually-hidden"> for LitterSense</span></a>
+          <a class="project-link" href="https://litter-sense-csp-web-app.vercel.app" target="_blank" rel="noopener noreferrer">Open live web app <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <a class="project-link project-link-follow" href="https://github.com/John-Orlie-Mascardo/LitterSense-CSP-WebApp" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+        </div>
+        <div class="project-media">
+          <p class="project-gallery-label">Web app</p>
+          <ul class="project-gallery project-gallery-wide">
+            <li><a href="images/projects/littersense/webapp-login.webp"><img src="images/projects/littersense/webapp-login.webp" alt="LitterSense sign-in page with email, password, and Google sign-in" width="1600" height="788" loading="lazy"></a></li>
+            <li><a href="images/projects/littersense/webapp-dashboard.webp"><img src="images/projects/littersense/webapp-dashboard.webp" alt="LitterSense dashboard showing a cat's visits, average duration, and behavior chart" width="1600" height="788" loading="lazy"></a></li>
+          </ul>
+          <p class="project-gallery-label">Hardware</p>
+          <ul class="project-gallery">
+            <li><a href="images/projects/littersense/hardware-side.webp"><img src="images/projects/littersense/hardware-side.webp" alt="Side view of the acrylic litter box enclosure with its wired sensors and control box" width="1600" height="1200" loading="lazy"></a></li>
+            <li><a href="images/projects/littersense/hardware-control-box.webp"><img src="images/projects/littersense/hardware-control-box.webp" alt="LitterSense control box mounted on the enclosure, with its electronics powered on" width="1600" height="1200" loading="lazy"></a></li>
+            <li><a href="images/projects/littersense/hardware-angle.webp"><img src="images/projects/littersense/hardware-angle.webp" alt="Angled view of the enclosure showing the cat entrance and mounted sensors" width="1600" height="1200" loading="lazy"></a></li>
+          </ul>
         </div>
       </article>
-      <article class="project-card">
-        <div class="project-visual project-visual-csoles">
-          <img src="images/projects/csoles-logo.png" alt="Csoles Connect logo" width="160" height="112" loading="lazy">
-          <span class="project-type">3rd year e-commerce project</span>
-        </div>
+
+      <article tabindex="-1" id="csoles-connect" class="project-card project-feature" aria-labelledby="csoles-title">
         <div class="project-details">
-          <h3>Csoles Connect <span class="project-alias">(CConnect)</span></h3>
+          <div class="project-visual project-visual-csoles">
+            <img src="images/projects/csoles-logo.png" alt="Csoles Connect logo" width="160" height="112" loading="lazy">
+            <span class="project-type">3rd year e-commerce project</span>
+          </div>
+          <h3 id="csoles-title">Csoles Connect <span class="project-alias">(CConnect)</span></h3>
           <p>A Flutter shopping app with a Node.js backend. Customers can browse products, manage their cart, and place orders, while store owners manage products and orders with real-time chat support.</p>
+          <p class="project-contribution"><strong>My contribution:</strong> I primarily worked on frontend development for the app.</p>
           <ul class="project-tags" aria-label="Csoles Connect technologies">
             <li>Flutter</li><li>Node.js</li><li>MongoDB</li><li>Firebase</li>
           </ul>
-          <a class="project-link" href="projects.html#csoles-connect">See screenshots &amp; details <span aria-hidden="true">&#8594;</span><span class="visually-hidden"> for Csoles Connect</span></a>
+          <a class="project-link" href="https://github.com/John-Orlie-Mascardo/cconnect-frontend" target="_blank" rel="noopener noreferrer">Frontend on GitHub <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <a class="project-link project-link-follow" href="https://github.com/John-Orlie-Mascardo/cconnect-backend" target="_blank" rel="noopener noreferrer">Backend on GitHub <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <p class="repository-note">Repository access may be required. <a href="#contact">Contact me for details.</a></p>
+        </div>
+        <div class="project-media">
+          <p class="project-gallery-label">App screens</p>
+          <ul class="project-gallery project-gallery-tall">
+            <li><a href="images/projects/csoles/app-home.webp"><img src="images/projects/csoles/app-home.webp" alt="Csoles Connect customer home screen with a Shop Now button" width="790" height="1800" loading="lazy"></a></li>
+            <li><a href="images/projects/csoles/app-chats.webp"><img src="images/projects/csoles/app-chats.webp" alt="Csoles Connect chat list showing a message from a store" width="790" height="1800" loading="lazy"></a></li>
+            <li><a href="images/projects/csoles/admin-dashboard.webp"><img src="images/projects/csoles/admin-dashboard.webp" alt="Csoles Connect admin dashboard with product, user, and order counts" width="790" height="1800" loading="lazy"></a></li>
+          </ul>
+          <details class="project-more">
+            <summary><span class="project-more-show">View all 7 screenshots</span><span class="project-more-hide">Show fewer screenshots</span></summary>
+            <ul class="project-gallery project-gallery-tall">
+              <li><a href="images/projects/csoles/profile.webp"><img src="images/projects/csoles/profile.webp" alt="Csoles Connect profile page with purchase status and a wishlist" width="790" height="1800" loading="lazy"></a></li>
+              <li><a href="images/projects/csoles/cart.webp"><img src="images/projects/csoles/cart.webp" alt="Csoles Connect shopping cart with the checkout total" width="790" height="1800" loading="lazy"></a></li>
+              <li><a href="images/projects/csoles/menu.webp"><img src="images/projects/csoles/menu.webp" alt="Csoles Connect side menu with notifications, messages, and logout" width="790" height="1800" loading="lazy"></a></li>
+              <li><a href="images/projects/csoles/admin-products.webp"><img src="images/projects/csoles/admin-products.webp" alt="Csoles Connect admin product list with a button to add products" width="790" height="1800" loading="lazy"></a></li>
+            </ul>
+          </details>
         </div>
       </article>
-      <article class="project-card">
-        <div class="project-visual project-visual-bytes">
-          <img src="images/projects/bytes-logo.png" alt="Bytes Cookbook logo" width="160" height="112" loading="lazy">
-          <span class="project-type">2nd year cookbook project</span>
-        </div>
+
+      <article tabindex="-1" id="bytes-cookbook" class="project-card project-feature" aria-labelledby="bytes-title">
         <div class="project-details">
-          <h3>Bytes Cookbook</h3>
+          <div class="project-visual project-visual-bytes">
+            <img src="images/projects/bytes-logo.png" alt="Bytes Cookbook logo" width="160" height="112" loading="lazy">
+            <span class="project-type">2nd year cookbook project</span>
+          </div>
+          <h3 id="bytes-title">Bytes Cookbook</h3>
           <p>An Android recipe app that helps users find dishes using ingredients they already have. Select ingredients, filter recipes by category, and explore Filipino dishes with cooking instructions.</p>
+          <p class="project-contribution"><strong>My contribution:</strong> I primarily worked on frontend development for the app.</p>
           <ul class="project-tags" aria-label="Bytes Cookbook technologies">
             <li>Java</li><li>Android</li><li>Android Studio</li>
           </ul>
-          <a class="project-link" href="projects.html#bytes-cookbook">See screenshots &amp; details <span aria-hidden="true">&#8594;</span><span class="visually-hidden"> for Bytes Cookbook</span></a>
+          <a class="project-link" href="https://github.com/joshua-austria/Bytes-Cookbook-Midterm-Project" target="_blank" rel="noopener noreferrer">GitHub (private repository) <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <p class="repository-note">Repository access is required. <a href="#contact">Contact me for details.</a></p>
+        </div>
+        <div class="project-media">
+          <p class="project-gallery-label">App screens</p>
+          <ul class="project-gallery project-gallery-tall">
+            <li><a href="images/projects/bytes/select-ingredients.webp"><img src="images/projects/bytes/select-ingredients.webp" alt="Bytes Cookbook ingredient picker with checkboxes for egg, rice, cabbage, and more" width="800" height="1742" loading="lazy"></a></li>
+            <li><a href="images/projects/bytes/recipe-results.webp"><img src="images/projects/bytes/recipe-results.webp" alt="Bytes Cookbook recipe results showing Egg Fried Rice with prep time and difficulty" width="800" height="1742" loading="lazy"></a></li>
+            <li><a href="images/projects/bytes/recipe-details.webp"><img src="images/projects/bytes/recipe-details.webp" alt="Bytes Cookbook Egg Fried Rice recipe page with ingredients and cooking steps" width="800" height="1742" loading="lazy"></a></li>
+          </ul>
+          <details class="project-more">
+            <summary><span class="project-more-show">View all 5 screenshots</span><span class="project-more-hide">Show fewer screenshots</span></summary>
+            <ul class="project-gallery project-gallery-tall">
+              <li><a href="images/projects/bytes/filters.webp"><img src="images/projects/bytes/filters.webp" alt="Bytes Cookbook category filter for main dishes, side dishes, and desserts" width="800" height="1742" loading="lazy"></a></li>
+              <li><a href="images/projects/bytes/recipe-steps.webp"><img src="images/projects/bytes/recipe-steps.webp" alt="Bytes Cookbook recipe page scrolled to the ingredients and cooking steps" width="800" height="1742" loading="lazy"></a></li>
+            </ul>
+          </details>
         </div>
       </article>
     </div>
-    <div class="projects-more">
-      <a class="portfolio-button" href="projects.html">View all projects</a>
+  </section>
+
+  <section id="skills" class="portfolio-section" aria-labelledby="skills-title" tabindex="-1">
+    <div class="section-heading">
+      <h2 id="skills-title">Skills <span class="ampersand">&amp;</span> Tools</h2>
+      <p>The languages and tools I've used in coursework and team projects.</p>
+    </div>
+    <div class="skills-groups">
+      <section class="skill-group" aria-labelledby="web-development-title">
+        <h3 id="web-development-title">Web Development</h3>
+        <ul class="skills-list" role="list">
+          <li class="skill-item">
+            <img src="images/html-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>HTML</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/css-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>CSS</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/javascript-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>JavaScript</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/react-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>React</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/nextjs-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Next.js</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/tailwind-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Tailwind CSS</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/bootstrap-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Bootstrap</span>
+          </li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="mobile-development-title">
+        <h3 id="mobile-development-title">Mobile Development</h3>
+        <ul class="skills-list" role="list">
+          <li class="skill-item">
+            <img class="skill-icon-mono" src="images/java-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Java</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/dart-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Dart</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/flutter-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Flutter</span>
+          </li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="backend-databases-title">
+        <h3 id="backend-databases-title">Backend and Databases</h3>
+        <ul class="skills-list" role="list">
+          <li class="skill-item">
+            <img class="skill-icon-mono" src="images/nodejs-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Node.js</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/supabase-logo.svg" alt="" width="64" height="64" loading="lazy">
+            <span>Supabase</span>
+          </li>
+          <li class="skill-item">
+            <img class="skill-icon-mono" src="images/mysql-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>MySQL</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/firebase-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Firebase</span>
+          </li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="other-languages-title">
+        <h3 id="other-languages-title">Other Languages</h3>
+        <ul class="skills-list" role="list">
+          <li class="skill-item">
+            <img src="images/c-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>C</span>
+          </li>
+          <li class="skill-item">
+            <img class="skill-icon-python" src="images/python-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Python</span>
+          </li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="developer-tools-title">
+        <h3 id="developer-tools-title">Developer Tools and Hosting</h3>
+        <ul class="skills-list" role="list">
+          <li class="skill-item">
+            <img src="images/vscode-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>VS Code</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/intellij-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>IntelliJ</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/androidstudio-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Android Studio</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/git-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Git</span>
+          </li>
+          <li class="skill-item">
+            <img class="skill-icon-light" src="images/vercel-logo.png" alt="" width="64" height="64" loading="lazy">
+            <span>Vercel</span>
+          </li>
+        </ul>
+      </section>
+      <section class="skill-group" aria-labelledby="ai-tools-title">
+        <h3 id="ai-tools-title">AI Tools</h3>
+        <ul class="skills-list" role="list">
+          <li class="skill-item">
+            <img src="images/claude-logo.svg" alt="" width="64" height="64" loading="lazy">
+            <span>Claude / Claude Code</span>
+          </li>
+          <li class="skill-item">
+            <img class="skill-icon-mono" src="images/openai-logo.svg" alt="" width="64" height="64" loading="lazy">
+            <span>ChatGPT / Codex</span>
+          </li>
+          <li class="skill-item">
+            <img src="images/gemini-logo.svg" alt="" width="64" height="64" loading="lazy">
+            <span>Gemini</span>
+          </li>
+          <li class="skill-item">
+            <img class="skill-icon-mono" src="images/github-copilot-logo.svg" alt="" width="64" height="64" loading="lazy">
+            <span>GitHub Copilot</span>
+          </li>
+        </ul>
+      </section>
     </div>
   </section>
 
   <section id="certifications" class="portfolio-section" aria-labelledby="certifications-title">
     <div class="section-heading">
-      <p class="section-eyebrow">Learning milestones</p>
-      <h2 id="certifications-title">Certifications &amp; Badges</h2>
+      <h2 id="certifications-title">Certifications <span class="ampersand">&amp;</span> Badges</h2>
       <p>Credentials in web development, productivity tools, networking, and the Internet of Things.</p>
     </div>
     <div class="certifications-grid">
@@ -167,8 +369,7 @@
   </section>
   <section id="recognition" class="portfolio-section" aria-labelledby="recognition-title">
     <div class="section-heading">
-      <p class="section-eyebrow">Sharing our research</p>
-      <h2 id="recognition-title">Presentations &amp; Recognition</h2>
+      <h2 id="recognition-title">Presentations <span class="ampersand">&amp;</span> Recognition</h2>
     </div>
     <article class="recognition-card">
       <a class="recognition-preview" href="assets/certificates/littersense-shenzhen-presentation.jpg" data-lightbox aria-label="View LitterSense presentation Certificate of Appreciation">
@@ -183,7 +384,49 @@
       </div>
     </article>
   </section>
+
+  <section id="contact" class="portfolio-section" aria-labelledby="contact-title" tabindex="-1">
+    <div class="contact-layout">
+      <div class="contact-intro">
+        <div class="section-heading">
+          <h2 id="contact-title">Contact</h2>
+          <p>Get in touch about internships, collaborations, or questions about my projects.</p>
+        </div>
+        <h3 class="social-heading">Find me online</h3>
+        <div class="social-media-icons">
+          <a href="https://github.com/joshua-austria" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="social-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.558 21.923c.563.104.768-.244.768-.542 0-.267-.01-.975-.015-1.913-3.13.68-3.79-1.508-3.79-1.508-.512-1.3-1.25-1.647-1.25-1.647-1.023-.7.078-.686.078-.686 1.13.079 1.725 1.16 1.725 1.16 1.005 1.723 2.638 1.225 3.28.937.102-.729.393-1.225.714-1.507-2.499-.284-5.126-1.25-5.126-5.566 0-1.23.44-2.234 1.16-3.022-.117-.285-.503-1.429.11-2.979 0 0 .945-.303 3.095 1.155a10.79 10.79 0 0 1 5.634 0c2.148-1.458 3.092-1.155 3.092-1.155.615 1.55.229 2.694.113 2.979.721.788 1.158 1.792 1.158 3.022 0 4.327-2.631 5.279-5.138 5.557.404.35.764 1.042.764 2.1 0 1.516-.014 2.739-.014 3.111 0 .3.202.652.774.542A11.252 11.252 0 0 0 12 .75Z"/></svg>
+            GitHub <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a href="https://www.linkedin.com/in/joshua-austria-212a6a35b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="social-icon" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124ZM7.119 20.452H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/></svg>
+            LinkedIn <span aria-hidden="true">&#8599;</span>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="b94412a2-6352-4ed4-b580-a9b6371b05d3">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="Name" autocomplete="name" required placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="Email" autocomplete="email" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" placeholder="Enter your message" rows="7" required></textarea>
+        </div>
+        <button class="portfolio-button" type="submit">Send message</button>
+      </form>
+    </div>
+  </section>
   </main>
+  <footer class="site-footer">
+    <span>Joshua Austria</span>
+    <a href="#home">Back to top <span aria-hidden="true">&#8593;</span></a>
+  </footer>
 
   <dialog id="lightbox" class="lightbox" aria-label="Image viewer">
     <button class="lightbox-close" type="button" aria-label="Close image viewer"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
@@ -199,5 +442,6 @@
   <script src="app.js?v=6"></script>
   <script src="hamburger.js?v=3"></script>
   <script src="lightbox.js?v=2"></script>
+  <script src="section-nav.js?v=1" defer></script>
 </body>
 </html>

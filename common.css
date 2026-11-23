@@ -263,23 +263,10 @@ header {
   body::before { display: block; }
 }
 
-/* Cards: one thin border; a soft candle-gold glow on hover. */
+/* Cards: one thin border; a soft accent on hover. */
 .project-card,
 .certification-card,
 .recognition-card { transition: border-color 0.3s ease, box-shadow 0.3s ease; }
 .project-card:hover,
 .certification-card:hover,
 .recognition-card:hover { border-color: var(--frame); box-shadow: var(--shadow), var(--glow); }
-
-/* Thin gold rule that fades out at both ends. */
-.section-heading :is(h1, h2)::after {
-  content: "";
-  display: block;
-  width: 160px;
-  height: 1px;
-  margin: 18px auto 0;
-  background: linear-gradient(to right, transparent, var(--frame), transparent);
-}
-
-/* Hairline rule between stacked sections. */
-.portfolio-section + .portfolio-section { border-top: 1px solid var(--border); padding-top: 64px; }
