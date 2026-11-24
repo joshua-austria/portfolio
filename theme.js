@@ -17,7 +17,6 @@
     const dark = theme === 'dark';
     const label = dark ? 'Switch to light mode' : 'Switch to dark mode';
     toggle.setAttribute('aria-pressed', String(dark));
-    toggle.setAttribute('aria-label', label);
     toggle.setAttribute('title', label);
     toggle.querySelector('span').textContent = dark ? '\u2600' : '\u263e';
   }

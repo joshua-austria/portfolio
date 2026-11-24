@@ -46,6 +46,7 @@
   color: var(--muted);
   font-size: clamp(1rem, 1.8vw, 1.15rem);
   line-height: 1.75;
+  text-wrap: pretty;
 }
 
 .profile-pic {
@@ -277,11 +278,6 @@
   margin-top: 8px;
   font-size: 0.8rem;
   line-height: 1.6;
-}
-
-.repository-note a {
-  color: var(--accent);
-  text-decoration: underline;
 }
 
 .certifications-grid {

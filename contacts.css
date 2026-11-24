@@ -68,7 +68,7 @@
   display: block;
   width: 100%;
   padding: 11px 13px;
-  border: 1px solid var(--ghost-border);
+  border: 1px solid var(--muted);
   border-radius: var(--radius);
   background: var(--surface-soft);
   color: var(--text);
@@ -83,6 +83,10 @@
   min-height: 140px;
   resize: vertical;
 }
+
+.contact-form .h-captcha,
+.form-error { margin-bottom: 18px; }
+.form-error { font-size: 0.9rem; font-weight: 600; }
 
 @media (max-width: 760px) {
   .contact-layout { grid-template-columns: minmax(0, 1fr); }

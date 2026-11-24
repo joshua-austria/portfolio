@@ -5,13 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joshua Austria | Portfolio</title>
   <meta name="description" content="Joshua Austria is a fourth-year IT student exploring AI-assisted web development and software testing. Explore his projects, skills, and certifications.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joshua Austria | Portfolio">
+  <meta property="og:description" content="A fourth-year IT student who builds web apps with AI tools and enjoys catching bugs before users do.">
+  <meta property="og:url" content="https://joshua-austria.github.io/portfolio/">
+  <meta property="og:image" content="https://joshua-austria.github.io/portfolio/images/Portprofile.jpg">
+  <meta name="twitter:card" content="summary">
   <meta name="color-scheme" content="light dark">
-  <script src="theme.js?v=2"></script>
-  <link rel="stylesheet" href="common.css?v=15">
-  <link rel="stylesheet" href="index.css?v=13">
+  <script src="theme.js?v=3"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="common.css?v=17">
+  <link rel="stylesheet" href="index.css?v=15">
   <link rel="stylesheet" href="projects.css?v=6">
   <link rel="stylesheet" href="techstack.css?v=7">
-  <link rel="stylesheet" href="contacts.css?v=6">
+  <link rel="stylesheet" href="contacts.css?v=8">
   <link rel="stylesheet" href="lightbox.css?v=3">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -33,7 +42,7 @@
         </ul>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span aria-hidden="true">&#9789;</span></button>
+        <button class="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch to dark mode"><span aria-hidden="true">&#9789;</span></button>
         <button class="hamburger-menu" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">
           <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
         </button>
@@ -58,22 +67,23 @@
     <div class="home-content">
       <h1 id="home-title" class="head1"><span class="hero-greeting">Hi, I am</span> Joshua Austria</h1>
       <p class="head2">Aspiring <span>Web Developer</span> <span class="ampersand">&amp;</span> <span>QA Tester</span></p>
-      <p class="hero-intro">A curious IT student exploring AI-assisted web development who enjoys testing features, finding bugs, and retesting after a fix.</p>
+      <p class="hero-intro">A fourth-year IT student who builds web apps with AI tools and enjoys catching bugs before users do.</p>
       <div class="hero-actions">
         <a class="portfolio-button" href="#projects">View My Projects</a>
+        <a class="portfolio-button portfolio-button-secondary" href="assets/Joshua_Austria_Resume.pdf" download>Download Resume</a>
         <a class="portfolio-button portfolio-button-secondary" href="#certifications">Certifications &amp; Badges</a>
       </div>
       <a class="hero-recognition-link" href="#recognition">Presentations &amp; Recognition <span aria-hidden="true">&#8595;</span></a>
     </div>
-    <img src="images/Portprofile.jpg" alt="Joshua Austria" width="1229" height="1229" class="profile-pic">
+    <img src="images/Portprofile.jpg" alt="Joshua Austria" width="690" height="690" class="profile-pic">
   </section>
 
   <section id="about" class="portfolio-section" aria-labelledby="about-title" tabindex="-1">
     <div class="section-heading about-intro">
       <h2 id="about-title">About Me</h2>
-      <p>I'm a fourth-year Information Technology student. I enjoy building web interfaces and checking how they behave when people use them.</p>
-      <p>I'm also interested in how AI can improve the way developers work. I use AI tools to work more efficiently when planning features, making code changes, and tracking down bugs. I review and test the changes myself so I understand what I'm building.</p>
-      <p>I'm currently exploring software testing in more depth, and I'm interested in building AI-powered features for the web.</p>
+      <p>I'm in my fourth year of a BS in Information Technology at St. Dominic College of Asia, and my goal is to become a full-stack web developer.</p>
+      <p>I love working with AI. I build most of my projects with AI tools, this portfolio included. I'm also strengthening my fundamentals, because the better I understand how code works, the more I can get out of these tools. Later, I'd like to learn AI engineering so I can add AI-powered features to web apps and build digital products of my own.</p>
+      <p>Software testing is another skill I'm exploring, partly because of our capstone project, LitterSense. My team and I fixed some bugs and retested to confirm they were gone, then found that the fixes had broken other features. I want to get better at catching bugs before an app goes live, especially regressions like those. I find it satisfying when people use something my team built and never run into a problem.</p>
     </div>
   </section>
 
@@ -161,7 +171,7 @@
           <ul class="project-tags" aria-label="Bytes Cookbook technologies">
             <li>Java</li><li>Android</li><li>Android Studio</li>
           </ul>
-          <a class="project-link" href="https://github.com/joshua-austria/Bytes-Cookbook-Midterm-Project" target="_blank" rel="noopener noreferrer">GitHub (private repository) <span aria-hidden="true">&#8599;</span><span class="visually-hidden"> (opens in a new tab)</span></a>
+          <p class="repository-note">Source code is in a private repository.</p>
         </div>
         <div class="project-media">
           <p class="project-gallery-label">App screens</p>
@@ -371,7 +381,7 @@
     </div>
     <article class="recognition-card">
       <a class="recognition-preview" href="assets/certificates/littersense-shenzhen-presentation.jpg" data-lightbox aria-label="View LitterSense presentation Certificate of Appreciation">
-        <img src="assets/certificates/littersense-shenzhen-presentation.jpg" alt="Certificate of Appreciation awarded to Joshua M. Austria for presenting LitterSense at Shenzhen City Polytechnic" width="3008" height="2359" loading="lazy">
+        <img src="assets/certificates/littersense-shenzhen-presentation-preview.jpg" alt="Certificate of Appreciation awarded to Joshua M. Austria for presenting LitterSense at Shenzhen City Polytechnic" width="1040" height="816" loading="lazy">
       </a>
       <div class="recognition-details">
         <h3>LitterSense Research Presentation</h3>
@@ -404,6 +414,8 @@
       </div>
       <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="b94412a2-6352-4ed4-b580-a9b6371b05d3">
+        <input type="hidden" name="subject" value="New message from your portfolio">
+        <input type="hidden" name="redirect" value="https://joshua-austria.github.io/portfolio/thanks.html">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="Name" autocomplete="name" required placeholder="Enter your name">
@@ -416,6 +428,8 @@
           <label for="message">Message</label>
           <textarea id="message" name="Message" placeholder="Enter your message" rows="7" required></textarea>
         </div>
+        <div class="h-captcha" data-captcha="true"></div>
+        <p class="form-error" id="captcha-error" role="alert" hidden>Please tick the captcha box before sending.</p>
         <button class="portfolio-button" type="submit">Send message</button>
       </form>
     </div>
@@ -437,9 +451,11 @@
   </dialog>
 
   <script src="particles.js"></script>
-  <script src="app.js?v=6"></script>
+  <script src="app.js?v=7"></script>
   <script src="hamburger.js?v=3"></script>
   <script src="lightbox.js?v=2"></script>
-  <script src="section-nav.js?v=1" defer></script>
+  <script src="section-nav.js?v=2" defer></script>
+  <script src="contact-form.js?v=1" defer></script>
+  <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>

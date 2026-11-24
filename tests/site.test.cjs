@@ -61,6 +61,7 @@ test('switching theme updates the page and survives opening another page', () =>
   site.listeners.click();
   assert.equal(site.document.documentElement.dataset.theme, 'dark');
   assert.equal(site.attributes['aria-pressed'], 'true');
+  assert.equal(site.attributes['aria-label'], undefined, 'the label stays fixed; aria-pressed carries the state');
   const nextPage = bootTheme({ saved: site.storage.get('portfolio-theme') });
   assert.equal(nextPage.document.documentElement.dataset.theme, 'dark');
 });
@@ -221,4 +222,77 @@ test('a standalone lightbox link opens alone with its own caption', () => {
   assert.equal(image.src, 'certificate.jpg');
   assert.equal(caption.textContent, 'Certificate of Appreciation');
   assert.equal(single, true);
+});
+
+test('stars run only in dark mode and stop when switching to light', () => {
+  const html = { dataset: { theme: 'light' } };
+  const window = { matchMedia: () => ({ matches: false }), pJSDom: [] };
+  let themeChanged;
+  let loads = 0;
+  let destroyed = 0;
+  const particlesJS = {
+    load: (id, config, done) => {
+      loads++;
+      window.pJSDom.push({ pJS: { fn: { vendors: { destroypJS: () => { destroyed++; } } } } });
+      done();
+    },
+  };
+  class MutationObserver {
+    constructor(callback) { themeChanged = callback; }
+    observe() {}
+  }
+  vm.runInNewContext(fs.readFileSync(path.join(root, 'app.js'), 'utf8'), {
+    window, particlesJS, MutationObserver, document: { documentElement: html },
+  });
+
+  assert.equal(loads, 0);
+  html.dataset.theme = 'dark';
+  themeChanged();
+  themeChanged();
+  assert.equal(loads, 1);
+  html.dataset.theme = 'light';
+  themeChanged();
+  assert.equal(destroyed, 1);
+  assert.equal(window.pJSDom.length, 0);
+});
+
+test('old page links redirect to the matching home section', () => {
+  const redirect = (dataset, hash, search = '') => {
+    let target;
+    vm.runInNewContext(fs.readFileSync(path.join(root, 'home-redirect.js'), 'utf8'), {
+      window: { location: { search, hash, replace: (url) => { target = url; } } },
+      document: { documentElement: { dataset } },
+    });
+    return target;
+  };
+  const about = { homeSection: 'about', homeAnchors: 'about-title' };
+
+  assert.equal(redirect({}, '#projects'), 'home.html#projects');
+  assert.equal(redirect(about, '#about-title'), 'home.html#about-title');
+  assert.equal(redirect(about, '#old-anchor'), 'home.html#about');
+  assert.equal(redirect(about, '#%E0%A4%A', '?ref=cv'), 'home.html?ref=cv#about');
+});
+
+test('the contact form stays on the page until the captcha is done', () => {
+  let submit;
+  const captcha = { value: '' };
+  const error = { hidden: true };
+  const form = {
+    addEventListener: (name, handler) => { if (name === 'submit') submit = handler; },
+    querySelector: () => captcha,
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(root, 'contact-form.js'), 'utf8'), {
+    document: { querySelector: (selector) => (selector === '.contact-form' ? form : error) },
+  });
+  const send = () => {
+    let prevented = false;
+    submit({ target: form, preventDefault() { prevented = true; } });
+    return prevented;
+  };
+
+  assert.equal(send(), true);
+  assert.equal(error.hidden, false);
+  captcha.value = 'token';
+  assert.equal(send(), false);
+  assert.equal(error.hidden, true);
 });

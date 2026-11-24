@@ -1,6 +1,9 @@
 (() => {
   const links = [...document.querySelectorAll('.nav-link[href^="#"]')];
-  const sections = [...document.querySelectorAll('main > section[id]')].reverse();
+  // Only sections with a nav link, so the last linked section stays highlighted through the ones between.
+  const sections = [...document.querySelectorAll('main > section[id]')]
+    .filter((section) => links.some((link) => link.hash === `#${section.id}`))
+    .reverse();
   if (!links.length || !sections.length) return;
 
   const root = document.documentElement;
