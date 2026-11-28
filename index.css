@@ -38,7 +38,7 @@
 }
 
 .head2 span { white-space: nowrap; }
-.ampersand { font-family: Inter, system-ui, sans-serif; }
+.ampersand { font-family: Georgia, 'Times New Roman', serif; }
 
 .hero-intro {
   max-width: 48ch;
